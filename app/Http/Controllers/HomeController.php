@@ -48,7 +48,7 @@ class HomeController extends Controller
             ['date' => '2026-03-25', 'am' => 'lisuto', 'pm' => 'lisuto'],
             ['date' => '2026-03-26', 'close' => '休診日'],
             ['date' => '2026-03-27', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-03-28', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-03-28', 'am' => 'matsubara', 'pm' => 'off'],
             ['date' => '2026-03-29', 'close' => '休診日'],
             // 第5週
             ['date' => '2026-03-30', 'am' => 'alise', 'pm' => 'alise'],
@@ -63,7 +63,7 @@ class HomeController extends Controller
         $data_4 = [
             [],
             [],
-            ['date' => '2026-04-01', 'am' => 'change', 'pm' => 'change'],
+            ['date' => '2026-04-01', 'am' => 'sekiguchi', 'pm' => 'sekiguchi'],
             ['date' => '2026-04-02', 'close' => '休診日'],
             ['date' => '2026-04-03', 'am' => 'alise', 'pm' => 'fukushima'],
             ['date' => '2026-04-04', 'am' => 'matsubara', 'pm' => 'off'],
@@ -82,7 +82,7 @@ class HomeController extends Controller
             ['date' => '2026-04-15', 'am' => 'alise', 'pm' => 'alise'],
             ['date' => '2026-04-16', 'close' => '休診日'],
             ['date' => '2026-04-17', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-04-18', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-04-18', 'am' => 'alise', 'pm' => 'off'],
             ['date' => '2026-04-19', 'close' => '休診日'],
             // 第4週 20〜26日
             ['date' => '2026-04-20', 'am' => 'alise', 'pm' => 'alise'],
