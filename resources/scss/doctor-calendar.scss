@@ -150,6 +150,13 @@
                         }
                     }
 
+                    &.sekiguchi {
+                        background-color: #ddf2e5;
+                        &::before {
+                            content: "関口先生";
+                        }
+                    }
+
                     // 休診
                     &.off {
                         background-color: #fff;
