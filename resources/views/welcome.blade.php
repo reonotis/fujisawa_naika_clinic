@@ -27,7 +27,7 @@
     </section>
 
     <!-- ヒーローセクション（テキスト・情報） -->
-    <section class="hero" aria-labelledby="hero-title">
+    {{-- <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content container">
             <h1>地域に寄り添う、かかりつけ内科</h1>
             <p class="hero-lead">
@@ -48,12 +48,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- 診療案内 --}}
-    <section id="medical_services">
+    {{-- <section id="medical_services">
         @include('layouts.partials.medical_services')
-    </section>
+    </section> --}}
 
     {{-- 医師紹介 --}}
     {{-- <section id="doctor">
