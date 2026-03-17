@@ -164,7 +164,7 @@
                         background-color: #036821;
                         color: #fff;
                         &::before {
-                            content: "※代診先生";
+                            content: "代診先生";
                         }
                     }
                 }
@@ -220,6 +220,7 @@
                     & > .calendar-pm {
                         &::before {
                             font-size: .6rem;
+                            line-height: 1.2;
                         }
                     }
                 }
