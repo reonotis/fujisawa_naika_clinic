@@ -1,0 +1,788 @@
+/* ベーススタイル */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #4D88CD;
+    --sub-color: #f1fbff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    color: #233042;
+    background-color: #f7fafc;
+    line-height: 1.7;
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: var(--main-color);
+}
+
+h3 {
+    margin: 0 0 4px;
+    color: var(--main-color);
+}
+
+.container {
+    width: 96%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.pc-only {
+    display: block;
+}
+
+.sp-only {
+    display: none;
+}
+
+.anchor-link {
+    color: #895e06;
+    text-decoration: underline;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .pc-only {
+        display: none;
+    }
+
+    .sp-only {
+        display: block;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    h2 {
+        margin: 0 0 15px;
+        font-size: 2rem;
+        color: var(--main-color);
+    }
+
+}
+
+
+/*****************
+* ヘッダー
+*****************/
+header {
+    position: relative;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 10px;
+        gap: 16px;
+
+        & > .header-hours{
+            padding: 0 10px;
+        }
+
+        & > .header-app-logo {
+            line-height: 1.3;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            .logo {
+                width: 50px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .logo-main {
+                display: block;
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                color: #174f85;
+            }
+
+            .logo-sub {
+                display: block;
+                color: #64748b;
+                font-size: 1.2rem;
+            }
+        }
+
+        & > .header-contact {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .header-inner {
+            & > .header-hours{
+                display: none;
+            }
+
+            & > .header-app-logo {
+                line-height: 1.2;
+                text-align: center;
+
+                .logo {
+                    width: 40px;
+                }
+
+                .logo-main {
+                    font-size: 0.9rem;
+                }
+
+                .logo-sub {
+                    font-size: 0.8rem;
+                }
+            }
+
+            & > .header-contact {
+                width: 180px;
+            }
+        }
+    }
+}
+
+
+/*****************
+* 診療時間表
+*****************/
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    line-height: 2;
+
+    th,
+    td {
+        border: 1px solid #e2e8f0;
+        text-align: center;
+        padding: 5px 10px;
+        font-size: 1.1rem;
+    }
+
+    thead th {
+        background: #e0f2fe;
+        color: var(--main-color);
+    }
+
+    tbody th {
+        background: #eff6ff;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    td {
+        color: var(--main-color);
+    }
+
+    &.on-header {
+        line-height: 1.5;
+        th,
+        td {
+            padding: 2px 10px;
+            font-size: .8rem;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hours-table {
+        th,
+        td {
+            padding: 5px 2px;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+/*****************
+* ナビゲーション
+*****************/
+.global-nav {
+    padding: .5rem 0;
+    background: var(--main-color);
+
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                padding: 0 5px;
+
+                a {
+                    padding: 2px 10px;
+                    position: relative;
+                    color: #fff;
+                    font-weight: 500;
+                    white-space: nowrap;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -4px;
+                        width: 0;
+                        height: 2px;
+                        background: #fff;
+                        transition: width 0.2s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/* セクションスタイル */
+section {
+    padding: 5rem 0 8rem;
+
+    &:nth-of-type(odd) {
+        background-color: var(--sub-color);
+    }
+
+    &:nth-of-type(even) {
+        background-color: #ffffff;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 0 4rem;
+    }
+}
+
+
+/*****************
+* ヒーロー画像スライドショー
+*****************/
+.hero-slideshow {
+    padding: 0;
+
+    .hero-media {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+
+        & > .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &.active {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slideshow {
+        .hero-media {
+            height: 400px;
+        }
+    }
+}
+
+
+/*****************
+* お知らせ
+*****************/
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & >  li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 15px 14px;
+        background: var(--sub-color);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+
+        & > .news-date {
+            width: 120px;
+            color: var(--main-color);
+        }
+
+        & > .news-body {
+            .news-new {
+                padding-right: 1rem;
+                font-weight: bold;
+                color: red;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .news-list {
+        gap: 0.5rem;
+        list-style: none;
+        margin: 0;
+        line-height: 1.3;
+        padding: 0;
+
+        & >  li {
+            width: 95%;
+            margin: 0 auto;
+            padding: 5px 10px;
+            gap: 0;
+
+            & > .news-date {
+                width: 100%;
+                font-weight: bold;
+            }
+
+            & > .news-body {
+                .news-new {
+                    padding-right: .5rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.hero {
+    position: relative;
+    color: #0f172a;
+    background: #eaf7ff;
+    padding: 48px 0 56px;
+
+    .hero-content {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 24px 20px 28px;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+        max-width: 960px;
+        margin-inline: auto;
+    }
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(22px, 4vw, 28px);
+    letter-spacing: 0.08em;
+}
+
+.hero-lead {
+    margin: 0 0 16px;
+    color: #475569;
+}
+
+.hero-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #eff6ff, #ecfeff);
+}
+
+.hero-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #1e293b;
+}
+
+.hero-tel {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f766e;
+}
+
+
+/* 医師紹介 */
+.doctor-profile {
+    display: flex;
+    gap: 24px;
+    align-items: start;
+}
+
+.image-card {
+    margin: 0;
+    width: 300px;
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+/*****************
+* 診療案内
+*****************/
+.medical-services-layout {
+    display: grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+
+    & > .card {
+        background: #f8fafc;
+        overflow: hidden;
+        border-right: 1px solid #dcdcdc;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+
+        & > .card-media {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3 / 1;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            & > .card-title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 5px 8px;
+                background:  rgba(7, 10, 18, 0.47);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    width: 100px;
+                    height: 30px;
+                    border-top: solid 1px #fff;
+                    border-left: solid 1px #fff;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    width: 100px;
+                    height: 30px;
+                    border-bottom: solid 1px #fff;
+                    border-right: solid 1px #fff;
+                }
+
+                h4 {
+                    position: relative;
+                    width: fit-content;
+                    color: #ffffff;
+                    font-size: 1.2rem;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5px;
+                        left: -10%;
+                        width: 120%;
+                        height: 2px;
+                        background: #fff;
+                    }
+                }
+            }
+
+        }
+
+        & > .card-body {
+            padding: 14px 16px 20px;
+            background-color: #f8fafc;
+
+            & > p {
+                margin: 0;
+                font-size: 1rem;
+                color: #4b5563;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .medical-services-layout {
+        grid-template-columns:repeat(1, minmax(0, 1fr));
+        gap: 20px;
+
+        & > .card {
+
+            & > .card-media {
+                aspect-ratio: 3 / 1;
+
+                & > .card-title {
+                    padding: 5px 8px;
+
+                    h4 {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            & > .card-body {
+                padding: 10px;
+
+                & > p {
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
+
+
+/*****************
+* 診療時間
+*****************/
+.hours-layout {
+    & > .hours-table-wrapper {
+        margin-bottom: 1rem;
+        padding: 16px;
+        background: #f8fafc;
+        border-radius: 14px;
+        box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
+        border: 1px solid #e2e8f0;
+
+        .note {
+            margin-top: 10px;
+            font-size: .9rem;
+            color: #6b7280;
+        }
+    }
+
+    & > .hours-contact ul {
+        margin: 8px 0 0;
+        padding-left: 50px;
+
+        & > li {
+            margin-bottom: 6px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hours-layout {
+        display: block;
+
+        .hours-table-wrapper {
+            font-size: .5rem;
+            padding: 16px;
+        }
+
+        & > .hours-contact ul {
+            padding-left: 30px;
+
+            & > li {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+
+/*****************
+* アクセス
+*****************/
+#access {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    .access-layout {
+        margin: 0 auto 3rem;
+        max-width: 800px;
+
+        & > .access-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #dcdcdc;
+            display: flex;
+            gap: 10px;
+
+            & > .access-item-title {
+                width: 120px;
+                font-weight: bold;
+                color: var(--main-color);
+            }
+        }
+    }
+
+    .google-map {
+        height: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #access {
+        .access-layout {
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+
+        & > .access-item {
+
+            & > .access-item-title {
+                width: 80px;
+            }
+        }
+        }
+
+        .google-map {
+            height: 300px;
+        }
+    }
+}
+
+
+/*****************
+* フッター
+*****************/
+footer {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding-block: 20px;
+
+    .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        font-size: 1rem;
+
+        .footer-info p {
+            margin: 0;
+        }
+
+        .footer-copy {
+            margin: 0;
+            margin-top: 6px;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav {
+            margin-top: 4px;
+
+            .to-top {
+                font-size: 0.9rem;
+                color: #aac5e5;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        .footer-inner {
+            padding-bottom: 1rem;
+            flex-direction: column;
+            gap: 20px;
+
+            .footer-info p {
+                text-align: center;
+            }
+
+            .footer-copy {
+                margin: 0;
+                margin-top: 6px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
