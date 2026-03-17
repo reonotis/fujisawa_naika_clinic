@@ -162,6 +162,8 @@ header {
 @media (max-width: 768px) {
     header {
         .header-inner {
+            padding-block: 5px;
+
             & > .header-hours{
                 display: none;
             }
