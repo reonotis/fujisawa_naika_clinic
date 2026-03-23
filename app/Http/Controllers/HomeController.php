@@ -40,7 +40,7 @@ class HomeController extends Controller
             ['date' => '2026-03-18', 'am' => 'alise', 'pm' => 'alise'],
             ['date' => '2026-03-19', 'close' => '休診日'],
             ['date' => '2026-03-20', 'close' => '春分の日'],
-            ['date' => '2026-03-21', 'irregular' => ''],
+            ['date' => '2026-03-21', 'close' => '休診日'],
             ['date' => '2026-03-22', 'close' => '休診日'],
             // 第4週
             ['date' => '2026-03-23', 'am' => 'alise', 'pm' => 'alise'],
