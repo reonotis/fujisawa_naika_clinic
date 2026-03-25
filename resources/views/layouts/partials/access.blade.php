@@ -31,7 +31,7 @@
         <div class="access-item">
             <div class="access-item-title">休診日</div>
             <div class="access-item-content">
-                土曜日、日曜日、祝日<br />
+                木曜日、土曜日、日曜日、祝日<br />
                 ※土曜日は午前のみ
             </div>
         </div>

@@ -26,34 +26,16 @@
         </div>
     </section>
 
-    <!-- ヒーローセクション（テキスト・情報） -->
-    {{-- <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content container">
-            <h1>地域に寄り添う、かかりつけ内科</h1>
-            <p class="hero-lead">
-                藤澤内科クリニックは、風邪などの急な体調不良から、
-                生活習慣病・慢性疾患まで幅広く診療いたします。
-            </p>
-            <div class="hero-info">
-                <div>
-                    <h3>診療時間</h3>
-                    <p>
-                        午前 / {{ \App\Constants\CommonConst::CLINIC_HOURS_AM }}、午後 / {{ \App\Constants\CommonConst::CLINIC_HOURS_PM }}{{ \App\Constants\CommonConst::CLINIC_HOURS_SAT_NOTE }}<br />
-                        休診日：{{ \App\Constants\CommonConst::CLINIC_CLOSED_DAYS }}
-                    </p>
-                </div>
-                <div>
-                    <h3>お電話でのご予約・お問い合わせ</h3>
-                    <p class="hero-tel"><a href="tel:{{ \App\Constants\CommonConst::CLINIC_TEL }}">TEL：{{ \App\Constants\CommonConst::CLINIC_TEL }}</a></p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     {{-- 診療案内 --}}
-    {{-- <section id="medical_services">
+    <section id="medical_services">
         @include('layouts.partials.medical_services')
-    </section> --}}
+    </section>
+
+    {{-- 自費診療 --}}
+{{--    <section>--}}
+{{--        @include('layouts.partials.self_pay')--}}
+{{--    </section>--}}
+
 
     {{-- 医師紹介 --}}
     {{-- <section id="doctor">
