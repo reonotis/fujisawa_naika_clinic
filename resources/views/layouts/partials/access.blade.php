@@ -5,34 +5,69 @@
     <h2 data-en="ACCESS">アクセス</h2>
     <div class="access-layout">
         <div class="access-item">
-            <div class="access-item-title">所在地</div>
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-map-pin-2-line') }}</div>
+                <span>所在地</span>
+            </div>
             <div class="access-item-content">
                     〒{{ \App\Constants\CommonConst::CLINIC_POSTAL_CODE }}<br />
                     {{ \App\Constants\CommonConst::CLINIC_ADDRESS }}  <a href="https://maps.app.goo.gl/TsKCo7KNHeGS78a88" class="anchor-link" target="_blank">(Google Mapで開く)</a>
             </div>
         </div>
         <div class="access-item">
-            <div class="access-item-title">電話</div>
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-phone-line') }}</div>
+                <span>電話</span>
+            </div>
             <div class="access-item-content">
                 <a href="tel:{{ \App\Constants\CommonConst::CLINIC_TEL }}">{{ \App\Constants\CommonConst::CLINIC_TEL }}</a><br />
             </div>
         </div>
         <div class="access-item">
-            <div class="access-item-title">FAX</div>
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-printer-line') }}</div>
+                <span>FAX</span>
+            </div>
             <div class="access-item-content">{{ \App\Constants\CommonConst::CLINIC_FAX }}</div>
         </div>
         <div class="access-item">
-            <div class="access-item-title">診療時間</div>
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-time-line') }}</div>
+                <span>診療時間</span>
+            </div>
             <div class="access-item-content">
                 午前：{{ \App\Constants\CommonConst::CLINIC_HOURS_AM }}<br />
                 午後：{{ \App\Constants\CommonConst::CLINIC_HOURS_PM }}
             </div>
         </div>
         <div class="access-item">
-            <div class="access-item-title">休診日</div>
+
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-calendar-close-line') }}</div>
+                <span>休診日</span>
+            </div>
             <div class="access-item-content">
                 木曜日、土曜日、日曜日、祝日<br />
                 ※土曜日は午前のみ
+            </div>
+        </div>
+        <div class="access-item">
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-car-fill') }}</div>
+                <span>駐車場</span>
+            </div>
+            <div class="access-item-content">
+                クリニック敷地内に4台<br />
+                クリニック道路挟んで専用駐車場5台あり
+            </div>
+        </div>
+        <div class="access-item">
+            <div class="access-item-title">
+                <div class="svg">{{ svg('ri-bus-line') }}</div>
+                <span>バス</span>
+            </div>
+            <div class="access-item-content">
+                東武バス加二号公園前徒歩1分
             </div>
         </div>
     </div>
