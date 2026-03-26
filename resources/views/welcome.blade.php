@@ -36,14 +36,14 @@
         @include('layouts.partials.self_pay')
     </section>
 
-    {{-- 医師紹介 --}}
-    <section id="doctor">
-        @include('layouts.partials.doctor')
-    </section>
-
     {{-- 診療時間 --}}
     <section id="hours">
         @include('layouts.partials.hours')
+    </section>
+
+    {{-- 医師紹介 --}}
+    <section id="doctor">
+        @include('layouts.partials.doctor')
     </section>
 
     {{-- アクセス --}}
