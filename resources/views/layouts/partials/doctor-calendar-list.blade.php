@@ -3,7 +3,7 @@
 @endpush
 
 <div class="doctor-calendar-container" data-current-month="4">
-    <h2>外来担当医表</h2>
+    <h2 data-en="SCHEDULE">外来担当医表</h2>
 
     <div class="doctor-calendar-nav">
         <button type="button" class="doctor-calendar-arrow doctor-calendar-prev" aria-label="前の月">

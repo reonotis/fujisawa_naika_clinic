@@ -2,7 +2,7 @@
 @endpush
 
 <div class="container">
-    <h2>アクセス</h2>
+    <h2 data-en="ACCESS">アクセス</h2>
     <div class="access-layout">
         <div class="access-item">
             <div class="access-item-title">所在地</div>

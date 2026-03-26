@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <h2>診療案内</h2>
+    <h2 data-en="SERVICES">診療案内</h2>
     <div class="medical-services-layout">
 
         <article class="services-item">

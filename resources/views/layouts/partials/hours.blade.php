@@ -2,7 +2,7 @@
 @endpush
 
 <div class="container">
-    <h2>診療時間</h2>
+    <h2 data-en="HOURS">診療時間</h2>
     <div class="hours-layout">
         <div class="hours-table-wrapper">
             <x-hours-table>

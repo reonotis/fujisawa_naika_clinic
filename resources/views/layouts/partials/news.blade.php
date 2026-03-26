@@ -19,14 +19,14 @@
     }, $news);
 @endphp
 
-<div>
-    <h2>お知らせ</h2>
-    <ul class="news-list">
+<div class="container">
+    <h2 data-en="NEWS">お知らせ</h2>
+    <div class="news-list">
         @foreach ($news as $item)
-        <li>
+        <div class="news-item">
             <span class="news-date">{{ $item['date']->format('Y.m.d') }}</span>
             <span class="news-body">@if($item['new'])<span class="news-new">new</span> @endif{{ $item['title'] }}</span>
-        </li>
+        </div>
         @endforeach
-    </ul>
+    </div>
 </div>
