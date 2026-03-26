@@ -32,10 +32,9 @@
     </section>
 
     {{-- 自費診療 --}}
-{{--    <section>--}}
-{{--        @include('layouts.partials.self_pay')--}}
-{{--    </section>--}}
-
+    <section>
+        @include('layouts.partials.self_pay')
+    </section>
 
     {{-- 医師紹介 --}}
     {{-- <section id="doctor">

@@ -237,7 +237,6 @@ header {
     }
 }
 
-
 @media (max-width: 768px) {
     .hours-table {
         th,
@@ -438,8 +437,9 @@ section {
 }
 
 
-
-/* 医師紹介 */
+/*****************
+* 医師紹介
+*****************/
 .doctor-profile {
     display: flex;
     gap: 24px;
@@ -521,7 +521,134 @@ section {
 * 自費診療
 *****************/
 .self-pay-layout {
+    & > .self-pay-contents {
+        margin: 1rem auto;
+        display: flex;
+        gap: 3rem;
+        flex-flow: column;
 
+        & > .self-pay-content {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 3px 5px 24px #BFC8CF3C, -5px 9px 8px 8px #BFC8CF3C;
+
+            & > .self-pay-title {
+                background: var(--main-color);
+                color: #fff;
+                padding: 1rem 2rem;
+                font-size: 1.3rem;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+
+                & > .self-pay-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    & > svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                & > .self-pay-price {
+                    font-weight: normal;
+                    font-size: 1.1rem;
+                }
+            }
+
+            & > .self-pay-body {
+                padding: 2rem;
+                background: #fff;
+                font-size: 1rem;
+
+                & > p.expected-effects {
+                    margin: 1rem 0 .5rem;
+                    font-weight: bold;
+                    color: var(--main-color);
+                }
+
+                & > ul.list-disc {
+                    margin: 0 0 0 1rem;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.25rem;
+
+                    & > li {
+                        position: relative;
+                        padding-left: 1.5rem;
+                        line-height: 1.7;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 17px;
+                            height: 10px;
+                            border-left: 2px solid var(--main-color);
+                            border-bottom: 2px solid var(--main-color);
+                            left: 0;
+                            top: .3em;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                & > .vitamin-list {
+                    margin-top: .5rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.75rem;
+
+                    & > span {
+                        background: #f0f0f0;
+                        color: var(--main-color);
+                        border: 1px solid var(--main-color);
+                        border-radius: 99px;
+                        padding: 0.25rem 1rem;
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .self-pay-layout {
+        width: 95%;
+        margin: 0 auto;
+
+        & > .self-pay-contents {
+
+            & > .self-pay-content {
+
+                & > .self-pay-title {
+                    padding: 1rem;
+                    font-size: 1.2rem;
+                    gap: 5px;
+
+                    & > .self-pay-label {
+                        gap: .2rem;
+
+                        & > svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                    & > .self-pay-price {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
