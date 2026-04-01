@@ -1,0 +1,29 @@
+
+.notice-container {
+    margin: 7rem 0 10rem;
+    padding: 0 1rem;
+
+    & > h1 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    & > h4 {
+        margin-bottom: .5rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .notice-container {
+        margin: 4rem 0 10rem;
+
+        & > h1 {
+            text-align: center;
+            margin: 1rem 0;
+        }
+    }
+
+}

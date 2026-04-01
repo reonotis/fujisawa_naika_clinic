@@ -17,13 +17,12 @@
     @vite('resources/scss/app.scss')
     @vite(['resources/js/app.js'])
 
-    <!-- Page-specific scripts -->
+    {{-- Page-specific scripts --}}
     @stack('scripts')
 </head>
 
 <body>
     @include('layouts.partials.header')
-    @include('layouts.partials.navigation')
 
     <main>
         @yield('content')

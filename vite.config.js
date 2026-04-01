@@ -24,6 +24,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/scss/app.scss',
                 'resources/scss/doctor-calendar.scss',
+                'resources/scss/notice-detail.scss',
             ],
             refresh: true,
         }),

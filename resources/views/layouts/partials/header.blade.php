@@ -4,7 +4,7 @@
             <div class="header-hours">
                 <x-hours-table addClass="on-header" />
             </div>
-            <div class="header-app-logo">
+            <a href="{{ route('top') }}" class="header-app-logo">
                 <div class="logo">
                     <img src="{{ asset('images/logo.png') }}" alt="アイコン" >
                 </div>
@@ -12,7 +12,7 @@
                     <span class="logo-main">藤澤内科クリニック</span>
                     <span class="logo-sub">Fujisawa Naika Clinic</span>
                 </div>
-            </div>
+            </a>
             <div class="header-contact">
                 <a href="tel:{{ \App\Constants\CommonConst::CLINIC_TEL }}">
                     <img src="{{ asset('images/tel.png') }}" alt="電話" >

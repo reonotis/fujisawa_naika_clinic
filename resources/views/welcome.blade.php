@@ -5,6 +5,8 @@
 
 @section('content')
 
+    @include('layouts.partials.navigation')
+
     {{-- ヒーロー画像スライドショー --}}
     <section class="hero-slideshow">
         @include('layouts.partials.hero-slideshow')
@@ -12,18 +14,14 @@
 
     {{-- お知らせ --}}
     <section id="news">
-        <div class="container">
-            @include('layouts.partials.news')
-        </div>
+        @include('layouts.partials.news')
     </section>
 
     {{-- 外来担当医表 --}}
     <section id="doctor_calendar">
-        <div class="container">
-            @include('layouts.partials.doctor-calendar-list', [
-                'doctor_calendar_data' => $doctor_calendar_data,
-            ])
-        </div>
+        @include('layouts.partials.doctor-calendar-list', [
+            'doctor_calendar_data' => $doctor_calendar_data,
+        ])
     </section>
 
     {{-- 診療案内 --}}

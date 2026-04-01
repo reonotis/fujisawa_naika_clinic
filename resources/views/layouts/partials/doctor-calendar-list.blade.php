@@ -2,48 +2,50 @@
     @vite('resources/scss/doctor-calendar.scss')
 @endpush
 
-<div class="doctor-calendar-container" data-current-month="4">
-    <h2 data-en="SCHEDULE">外来担当医表</h2>
+<div class="container">
+    <div class="doctor-calendar-container" data-current-month="4">
+        <h2 data-en="SCHEDULE">外来担当医表</h2>
 
-    <div class="doctor-calendar-nav">
-        <button type="button" class="doctor-calendar-arrow doctor-calendar-prev" aria-label="前の月">
-            ‹
-        </button>
+        <div class="doctor-calendar-nav">
+            <button type="button" class="doctor-calendar-arrow doctor-calendar-prev" aria-label="前の月">
+                ‹
+            </button>
 
-        <p class="doctor-calendar-title" data-month-label></p>
+            <p class="doctor-calendar-title" data-month-label></p>
 
-        <button type="button" class="doctor-calendar-arrow doctor-calendar-next" aria-label="次の月">
-            ›
-        </button>
-    </div>
+            <button type="button" class="doctor-calendar-arrow doctor-calendar-next" aria-label="次の月">
+                ›
+            </button>
+        </div>
 
 
-    <div class="doctor-calendar-months">
-        @foreach ($doctor_calendar_data as $ym => $days)
-            @php
-                // "2026-04" のようなキーから「2026年4月」の形式に変換
-                $label = \Carbon\Carbon::parse($ym . '-01')->format('Y年n月');
-            @endphp
-            <div class="doctor-calendar-month" data-index="{{ $loop->index }}" data-label="{{ $label }}"
-                 @unless($loop->first) hidden @endunless>
-                <x-calendar-table :data="$days" />
+        <div class="doctor-calendar-months">
+            @foreach ($doctor_calendar_data as $ym => $days)
+                @php
+                    // "2026-04" のようなキーから「2026年4月」の形式に変換
+                    $label = \Carbon\Carbon::parse($ym . '-01')->format('Y年n月');
+                @endphp
+                <div class="doctor-calendar-month" data-index="{{ $loop->index }}" data-label="{{ $label }}"
+                     @unless($loop->first) hidden @endunless>
+                    <x-calendar-table :data="$days" />
+                </div>
+            @endforeach
+        </div>
+
+        <div class="doctor-calendar-support">
+            <div>
+                <p>午後診療 14:00~17:00まで</p>
+                <p>土曜日 9:00~12:00まで</p>
             </div>
-        @endforeach
-    </div>
 
-    <div class="doctor-calendar-support">
-        <div>
-            <p>午後診療 14:00~17:00まで</p>
-            <p>土曜日 9:00~12:00まで</p>
+            <div>
+                <p>※土曜の松原先生は、一般内科、特に循環器内科にお詳しい先生です。<br>
+                    &emsp;高血圧、動悸など心疾患でお悩みの方は是非ご相談ください。</p>
+                <p>※4月の金曜午後担当の副島先生は循環器、また糖尿病にも非常にお詳しい先生です。</p>
+            </div>
         </div>
 
-        <div>
-            <p>※土曜の松原先生は、一般内科、特に循環器内科にお詳しい先生です。<br>
-                &emsp;高血圧、動悸など心疾患でお悩みの方は是非ご相談ください。</p>
-            <p>※4月の金曜午後担当の副島先生は循環器、また糖尿病にも非常にお詳しい先生です。</p>
-        </div>
     </div>
-
 </div>
 
 @push('scripts')
