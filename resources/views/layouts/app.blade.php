@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>藤澤内科クリニック</title>
-    <meta name="description" content="千葉県流山市の藤澤内科クリニック公式サイト。内科・循環器内科を中心に、生活習慣病（高血圧・糖尿病・脂質異常症）や風邪・発熱などの一般内科診療を行っています。診療内容、診療時間、アクセス、休診日やお知らせをわかりやすくご案内します。" />
-    <meta property="og:title" content="藤澤内科クリニック｜千葉県流山市の内科・循環器内科" />
-    <meta property="og:description" content="千葉県流山市の藤澤内科クリニック公式サイト。内科・循環器内科を中心に、生活習慣病（高血圧・糖尿病・脂質異常症）や風邪・発熱などの一般内科診療を行っています。診療内容、診療時間、アクセス、休診日やお知らせをわかりやすくご案内します。" />
+    <title>流山市の胃カメラ（胃内視鏡検査）｜経鼻内視鏡・鎮静剤対応｜藤澤内科クリニック</title>
+    <meta name="description" content="流山市の内科クリニック。専門医が、高血圧や糖尿病等の生活習慣病から健康診断まで幅広く対応します。胃カメラ（経鼻可）・大腸カメラは麻酔で眠ったまま苦痛を抑えた検査が可能です。女性医師在籍。安心の診療で、地域の健康を支えます。" />
+    <meta property="og:title" content="流山市の胃カメラ（胃内視鏡検査）｜経鼻内視鏡・鎮静剤対応｜藤澤内科クリニック" />
+    <meta property="og:description" content="流山市の内科クリニック。専門医が、高血圧や糖尿病等の生活習慣病から健康診断まで幅広く対応します。胃カメラ（経鼻可）・大腸カメラは麻酔で眠ったまま苦痛を抑えた検査が可能です。女性医師在籍。安心の診療で、地域の健康を支えます。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:image" content="{{ asset('images/logo_2.png') }}" />
-    <meta property="og:site_name" content="藤澤内科クリニック" />
+    <meta property="og:site_name" content="流山市の胃カメラ（胃内視鏡検査）｜経鼻内視鏡・鎮静剤対応｜藤澤内科クリニック" />
     <link rel="icon" type="image/png" href="{{ asset('images/icon.png') }}" />
 
     @vite('resources/scss/app.scss')
