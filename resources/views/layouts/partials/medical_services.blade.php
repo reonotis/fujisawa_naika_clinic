@@ -19,7 +19,10 @@
         <article class="services-item">
             <div class="item-title"><div class="svg">{{ svg('ri-file-list-3-line') }}</div>各種健診</div>
             <div class="item-text">
-                <p>各種健診・検診・検査特定健診、企業健診、各種がん検診に対応しています。また、血液検査、尿検査、心電図、レントゲンなど各種検査も実施しています。</p>
+                <p>定期健診、雇入時健診、職場健診など随時行っております。</p>
+                <p>￥9.900円（税込）</p>
+                <p>（血液検査、尿検査、心電図、胸部レントゲン検査含む）</p>
+                <p>流山市が実施する各種健康診断（特定健診）およびがん検診等も行っております。</p>
             </div>
         </article>
         <article class="services-item">
