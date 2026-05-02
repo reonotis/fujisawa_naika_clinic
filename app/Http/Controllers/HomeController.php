@@ -105,7 +105,6 @@ class HomeController extends Controller
             [],  // 5/1, 5/2, 5/3 対象月外
         ];
 
-//土曜 松原先生 （第3のみ私）
         $data_5 = [
             // 第1週
             [],
@@ -150,7 +149,6 @@ class HomeController extends Controller
         ];
 
         return [
-            '2026-04' => $data_4,
             '2026-05' => $data_5,
         ];
     }
