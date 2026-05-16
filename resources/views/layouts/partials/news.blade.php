@@ -5,10 +5,10 @@
 @php
     $news = [
         [
-            'date' => Carbon\Carbon::parse('2026-04-20'),
+            'date' => Carbon\Carbon::parse('2026-05-16'),
             'type' => 'notice',
             'type_comment' => 'お知らせ',
-            'title' => '5月の外来担当医表を公開しました。',
+            'title' => '6月の外来担当医表を公開しました。',
         ],
         [
             'date' => Carbon\Carbon::parse('2026-04-01'),
@@ -17,12 +17,12 @@
             'title' => '当院のマイナ保険証体制につきまして',
             'route' => 'maina_notice',
         ],
-        [
-            'date' => Carbon\Carbon::parse('2026-03-15'),
-            'type' => 'notice',
-            'type_comment' => 'お知らせ',
-            'title' => '4/1 は 代診ドクターになります。',
-        ],
+//        [
+//            'date' => Carbon\Carbon::parse('2026-03-15'),
+//            'type' => 'notice',
+//            'type_comment' => 'お知らせ',
+//            'title' => '4/1 は 代診ドクターになります。',
+//        ],
     ];
     $news = array_map(function ($item) {
         $item['new'] = $item['date']->gte(Carbon\Carbon::now()->subWeek()) && $item['date']->lte(Carbon\Carbon::now());

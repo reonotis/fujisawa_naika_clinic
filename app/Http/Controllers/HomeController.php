@@ -148,8 +148,52 @@ class HomeController extends Controller
             ['date' => '2026-05-31', 'close' => '休診日'],
         ];
 
+        $data_6 = [
+            // 第1週
+            ['date' => '2026-06-01', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-02', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-03', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-06-04', 'close' => '休診日'],
+            ['date' => '2026-06-05', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-06-06', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-06-07', 'close' => '休診日'],
+            // 第2週
+            ['date' => '2026-06-08', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-09', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-10', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-06-11', 'close' => '休診日'],
+            ['date' => '2026-06-12', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-06-13', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-06-14', 'close' => '休診日'],
+            // 第3週
+            ['date' => '2026-06-15', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-16', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-17', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-06-18', 'close' => '休診日'],
+            ['date' => '2026-06-19', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-06-20', 'am' => 'alise', 'pm' => 'off'],
+            ['date' => '2026-06-21', 'close' => '休診日'],
+            // 第4週
+            ['date' => '2026-06-22', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-23', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-24', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-06-25', 'close' => '休診日'],
+            ['date' => '2026-06-26', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-06-27', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-06-28', 'close' => '休診日'],
+            // 第5週
+            ['date' => '2026-06-29', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-30', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-06-03', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-06-04', 'close' => '休診日'],
+            [],
+            [],
+            [],
+        ];
+
         return [
             '2026-05' => $data_5,
+            '2026-06' => $data_6,
         ];
     }
 }
