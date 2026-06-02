@@ -192,7 +192,7 @@ class HomeController extends Controller
         ];
 
         return [
-            '2026-05' => $data_5,
+//            '2026-05' => $data_5,
             '2026-06' => $data_6,
         ];
     }

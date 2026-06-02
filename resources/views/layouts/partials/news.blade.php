@@ -5,6 +5,13 @@
 @php
     $news = [
         [
+            'date' => Carbon\Carbon::parse('2026-06-02'),
+            'type' => 'notice',
+            'type_comment' => 'お知らせ',
+            'title' => '胸部レントゲン撮影にAI機能を搭載しました。',
+            'route' => 'ai_xray_notice',
+        ],
+        [
             'date' => Carbon\Carbon::parse('2026-05-16'),
             'type' => 'notice',
             'type_comment' => 'お知らせ',
