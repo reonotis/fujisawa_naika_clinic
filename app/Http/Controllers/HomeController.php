@@ -184,8 +184,8 @@ class HomeController extends Controller
             // 第5週
             ['date' => '2026-06-29', 'am' => 'alise', 'pm' => 'alise'],
             ['date' => '2026-06-30', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-06-03', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-06-04', 'close' => '休診日'],
+            [],
+            [],
             [],
             [],
             [],
