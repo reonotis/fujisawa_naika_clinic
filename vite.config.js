@@ -25,6 +25,7 @@ export default defineConfig({
                 'resources/scss/app.scss',
                 'resources/scss/doctor-calendar.scss',
                 'resources/scss/notice-detail.scss',
+                'resources/scss/endoscopy.scss',
             ],
             refresh: true,
         }),

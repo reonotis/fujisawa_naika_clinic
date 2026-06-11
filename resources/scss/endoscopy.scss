@@ -1,0 +1,246 @@
+/* ヒーロー */
+.endoscopy-hero {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.55);
+    }
+
+    .endoscopy-hero-text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        gap: .5rem;
+
+        p {
+            font-size: 1rem;
+            letter-spacing: .2em;
+            opacity: .85;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+        }
+    }
+}
+
+/* イントロ */
+.endoscopy-intro {
+    margin: 4rem 0 0;
+    padding: 2rem;
+    background: var(--sub-color);
+    border-left: 4px solid var(--main-color);
+    font-size: 1rem;
+    line-height: 1.9;
+
+    strong {
+        color: var(--main-color);
+    }
+}
+
+/* 特徴セクション */
+.endoscopy-features {
+    margin-top: 2rem;
+}
+
+/* 各特徴アイテム */
+.feature-item {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 3rem;
+    align-items: center;
+    padding: 3.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+
+    &.feature-item--reverse {
+        grid-template-columns: 360px 1fr;
+
+        .feature-body {
+            order: 2;
+        }
+
+        .feature-img {
+            order: 1;
+        }
+    }
+}
+
+.feature-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .feature-num {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--main-color);
+        opacity: .3;
+        line-height: 1;
+        font-family: serif;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin: 0;
+    }
+}
+
+.feature-body {
+    p + p {
+        margin-top: .75rem;
+    }
+}
+
+.feature-list {
+    margin: .75rem 0 0 0;
+    padding-left: 1.2rem;
+
+    li {
+        margin-bottom: .75rem;
+        line-height: 1.8;
+    }
+}
+
+/* 画像エリア：プレースホルダー（写真が未入稿の場合）*/
+.feature-img--placeholder {
+    aspect-ratio: 4/3;
+    background: #f0f4f8;
+    border: 2px dashed #c9d8e8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #90a4b8;
+    font-size: .85rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* 画像エリア：写真あり */
+.feature-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+/* アイコン型（画像なし特徴用）*/
+.feature-img--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2.5rem;
+    background: var(--sub-color);
+    border-radius: 8px;
+
+    svg {
+        width: 80px;
+        height: 80px;
+        color: var(--main-color);
+    }
+
+    p {
+        font-weight: 700;
+        color: var(--main-color);
+        font-size: .95rem;
+        text-align: center;
+    }
+}
+
+/* CTAエリア */
+.endoscopy-cta {
+    margin: 5rem 0 8rem;
+    padding: 3rem;
+    background: var(--sub-color);
+    border-radius: 8px;
+    text-align: center;
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #555;
+    }
+
+    .endoscopy-cta-tel {
+        display: inline-flex;
+        align-items: center;
+        gap: .75rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--main-color);
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 36px;
+        }
+    }
+
+    .endoscopy-cta-back {
+        display: block;
+        font-size: .9rem;
+        color: #666;
+        text-decoration: underline;
+        margin-top: .5rem;
+
+        &:hover {
+            color: var(--main-color);
+        }
+    }
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .endoscopy-hero {
+        height: 240px;
+
+        .endoscopy-hero-text {
+            h1 { font-size: 1.4rem; }
+        }
+    }
+
+    .endoscopy-intro {
+        margin: 2rem 0 0;
+        padding: 1.25rem;
+    }
+
+    .feature-item,
+    .feature-item.feature-item--reverse {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 0;
+
+        .feature-body { order: 1; }
+        .feature-img  { order: 2; }
+    }
+
+    .feature-img--placeholder {
+        aspect-ratio: 16/9;
+    }
+
+    .endoscopy-cta {
+        padding: 2rem 1rem;
+        margin: 3rem 0 5rem;
+
+        .endoscopy-cta-tel {
+            font-size: 1.4rem;
+        }
+    }
+}

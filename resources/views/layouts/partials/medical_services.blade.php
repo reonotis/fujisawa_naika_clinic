@@ -25,16 +25,20 @@
                 <p>流山市が実施する各種健康診断（特定健診）およびがん検診等も行っております。</p>
             </div>
         </article>
-        <article class="services-item">
+        <article class="services-item services-item--linked">
+            <a href="{{ route('endoscopy') }}" class="services-link-overlay" aria-label="内視鏡検査の詳細ページへ"></a>
             <div class="item-title"><div class="svg">{{ svg('ri-search-eye-line') }}</div>胃カメラ（上部内視鏡検査）</div>
             <div class="item-text">
                 <p>流山市で胃カメラをご希望の方へ当院では経鼻内視鏡や鎮静剤を使用した検査にも対応し、「つらくない胃カメラ」を心がけています。胸やけ、胃の痛み、胃もたれ、ピロリ菌検査・除菌、健診での異常指摘がある方はご相談ください。 流山市の胃がん検診も行っております。</p>
+                <a href="{{ route('endoscopy') }}" class="services-detail-link">当院の内視鏡検査の特徴を見る →</a>
             </div>
         </article>
-        <article class="services-item">
+        <article class="services-item services-item--linked">
+            <a href="{{ route('endoscopy') }}" class="services-link-overlay" aria-label="内視鏡検査の詳細ページへ"></a>
             <div class="item-title"><div class="svg">{{ svg('ri-microscope-line') }}</div>大腸カメラ（下部内視鏡検査）</div>
             <div class="item-text">
                 <p>大腸がんの早期発見のため、大腸内視鏡検査を行っています。便潜血陽性、血便、便秘・下痢、腹痛などの症状がある方はご相談ください。鎮静剤を使用し、苦痛の少ない検査に配慮しています。ポリープ切除にも対応可能です。</p>
+                <a href="{{ route('endoscopy') }}" class="services-detail-link">当院の内視鏡検査の特徴を見る →</a>
             </div>
         </article>
         <article class="services-item">
