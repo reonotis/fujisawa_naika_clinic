@@ -5,17 +5,24 @@
 @php
     $news = [
         [
+            'date' => Carbon\Carbon::parse('2026-06-11'),
+            'type' => 'notice',
+            'type_comment' => 'お知らせ',
+            'title' => '令和6年度 流山市特定健診・肝炎ウイルス検診のご案内（6/15〜）',
+            'route' => 'kensin_notice',
+        ],
+        [
+            'date' => Carbon\Carbon::parse('2026-06-11'),
+            'type' => 'notice',
+            'type_comment' => 'お知らせ',
+            'title' => '7月の外来担当医表を公開しました。',
+        ],
+        [
             'date' => Carbon\Carbon::parse('2026-06-02'),
             'type' => 'notice',
             'type_comment' => 'お知らせ',
             'title' => '胸部レントゲン撮影にAI機能を搭載しました。',
             'route' => 'ai_xray_notice',
-        ],
-        [
-            'date' => Carbon\Carbon::parse('2026-05-16'),
-            'type' => 'notice',
-            'type_comment' => 'お知らせ',
-            'title' => '6月の外来担当医表を公開しました。',
         ],
         [
             'date' => Carbon\Carbon::parse('2026-04-01'),

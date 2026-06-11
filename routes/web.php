@@ -16,4 +16,5 @@ Route::get('/endoscopy', function () {
 Route::prefix('notice')->group(function () {
     Route::get('maina', [NoticeController::class, 'index'])->defaults('type', 'maina')->name('maina_notice');
     Route::get('ai-xray', [NoticeController::class, 'index'])->defaults('type', 'ai_xray')->name('ai_xray_notice');
+    Route::get('kensin', [NoticeController::class, 'index'])->defaults('type', 'kensin')->name('kensin_notice');
 });
