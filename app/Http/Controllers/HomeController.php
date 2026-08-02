@@ -61,49 +61,6 @@ class HomeController extends Controller
             [],
         ];
 
-        $data_7 = [
-            // 第1週（月火は対象月外）
-            [],
-            [],
-            ['date' => '2026-07-01', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-07-02', 'close' => '休診日'],
-            ['date' => '2026-07-03', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-07-04', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-07-05', 'close' => '休診日'],
-            // 第2週
-            ['date' => '2026-07-06', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-07-07', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-07-08', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-07-09', 'close' => '休診日'],
-            ['date' => '2026-07-10', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-07-11', 'am' => 'alise', 'pm' => 'off'],  // 藤澤先生（松原先生代理）
-            ['date' => '2026-07-12', 'close' => '休診日'],
-            // 第3週
-            ['date' => '2026-07-13', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-07-14', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-07-15', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-07-16', 'close' => '休診日'],
-            ['date' => '2026-07-17', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-07-18', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-07-19', 'close' => '休診日'],
-            // 第4週
-            ['date' => '2026-07-20', 'close' => '海の日'],
-            ['date' => '2026-07-21', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-07-22', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-07-23', 'close' => '休診日'],
-            ['date' => '2026-07-24', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-07-25', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-07-26', 'close' => '休診日'],
-            // 第5週（土日は対象月外）
-            ['date' => '2026-07-27', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-07-28', 'am' => 'sekiguchi', 'pm' => 'sekiguchi'],  // 終日関口先生
-            ['date' => '2026-07-29', 'am' => 'alise', 'pm' => 'alise'],  // 藤澤先生（関口先生なし）
-            ['date' => '2026-07-30', 'close' => '休診日'],
-            ['date' => '2026-07-31', 'am' => 'alise', 'pm' => 'fukushima'],
-            [],
-            [],
-        ];
-
         $data_8 = [
             // 第1週（月〜金は対象月外）
             [],
@@ -155,9 +112,52 @@ class HomeController extends Controller
             [],
         ];
 
+        $data_9 = [
+            // 第1週（月は対象月外）
+            [],
+            ['date' => '2026-09-01', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-02', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-09-03', 'close' => '休診日'],
+            ['date' => '2026-09-04', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-09-05', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-09-06', 'close' => '休診日'],
+            // 第2週
+            ['date' => '2026-09-07', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-08', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-09', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-09-10', 'close' => '休診日'],
+            ['date' => '2026-09-11', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-09-12', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-09-13', 'close' => '休診日'],
+            // 第3週
+            ['date' => '2026-09-14', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-15', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-16', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-09-17', 'close' => '休診日'],
+            ['date' => '2026-09-18', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-09-19', 'am' => 'alise', 'pm' => 'off'],  // 藤澤先生
+            ['date' => '2026-09-20', 'close' => '休診日'],
+            // 第4週（シルバーウィーク：敬老の日〜秋分の日）
+            ['date' => '2026-09-21', 'close' => '敬老の日'],
+            ['date' => '2026-09-22', 'close' => '国民の休日'],
+            ['date' => '2026-09-23', 'close' => '秋分の日'],
+            ['date' => '2026-09-24', 'close' => '休診日'],
+            ['date' => '2026-09-25', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-09-26', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-09-27', 'close' => '休診日'],
+            // 第5週（木〜日は対象月外）
+            ['date' => '2026-09-28', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-29', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-09-30', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            [],
+            [],
+            [],
+            [],
+        ];
+
         return [
-            '2026-07' => $data_7,
             '2026-08' => $data_8,
+            '2026-09' => $data_9,
         ];
     }
 }

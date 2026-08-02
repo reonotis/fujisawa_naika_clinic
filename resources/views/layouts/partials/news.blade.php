@@ -5,17 +5,17 @@
 @php
     $news = [
         [
-            'date' => Carbon\Carbon::parse('2026-06-11'),
+            'date' => Carbon\Carbon::parse('2026-08-02'),
             'type' => 'notice',
             'type_comment' => 'お知らせ',
-            'title' => '令和6年度 流山市特定健診・肝炎ウイルス検診のご案内（6/15〜）',
-            'route' => 'kensin_notice',
+            'title' => '9月の外来担当医表を公開しました。',
         ],
         [
             'date' => Carbon\Carbon::parse('2026-06-11'),
             'type' => 'notice',
             'type_comment' => 'お知らせ',
-            'title' => '7月の外来担当医表を公開しました。',
+            'title' => '令和6年度 流山市特定健診・肝炎ウイルス検診のご案内（6/15〜）',
+            'route' => 'kensin_notice',
         ],
         [
             'date' => Carbon\Carbon::parse('2026-06-02'),
