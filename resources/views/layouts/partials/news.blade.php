@@ -5,6 +5,13 @@
 @php
     $news = [
         [
+            'date' => Carbon\Carbon::parse('2026-08-10'),
+            'type' => 'notice',
+            'type_comment' => 'お知らせ',
+            'title' => '医療用レーザー治療のご案内',
+            'route' => 'laser_notice',
+        ],
+        [
             'date' => Carbon\Carbon::parse('2026-08-02'),
             'type' => 'notice',
             'type_comment' => 'お知らせ',
