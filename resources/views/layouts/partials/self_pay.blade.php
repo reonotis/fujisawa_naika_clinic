@@ -62,6 +62,8 @@
             </div>
         </div>
 
+        <a href="{{ route('self_pay') }}" class="services-detail-link">自費診療の詳細・料金を見る →</a>
+
     </div>
 </div>
 

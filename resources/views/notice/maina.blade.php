@@ -4,6 +4,13 @@
     @vite('resources/scss/notice-detail.scss')
 @endpush
 
+@section('breadcrumb')
+    @include('layouts.partials.breadcrumb', ['crumbs' => [
+        ['label' => 'お知らせ'],
+        ['label' => 'マイナ保険証のご案内'],
+    ]])
+@endsection
+
 @section('content')
 
     <div class="container">

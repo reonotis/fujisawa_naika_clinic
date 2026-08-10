@@ -1,0 +1,192 @@
+/* ===========================
+   自費診療 専用ページ
+=========================== */
+
+.self-pay-page {
+    padding: 3rem 0 6rem;
+
+    & > h1 {
+        text-align: center;
+        margin-bottom: .75rem;
+    }
+
+    & > .self-pay-page-lead {
+        text-align: center;
+        color: #555;
+        font-size: .95rem;
+        line-height: 1.9;
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* ===========================
+   メニューグリッド（PC: 2列 / SP: 1列）
+=========================== */
+.self-pay-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+
+    & > .self-pay-contents {
+        grid-column: 1 / -1;
+        margin-top: 1rem;
+    }
+}
+
+/* ===========================
+   カードボタン
+=========================== */
+.self-pay-menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.6rem 1.8rem 1.4rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-top-width: 5px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    min-height: 140px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: '›';
+        position: absolute;
+        bottom: 1.2rem;
+        right: 1.4rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        opacity: .3;
+        transition: opacity .18s ease, right .18s ease;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+        background: #fafafa;
+
+        &::after {
+            opacity: .7;
+            right: 1.1rem;
+        }
+    }
+
+    .self-pay-menu-badge {
+        display: inline-block;
+        padding: .28rem 1rem;
+        border-radius: 99px;
+        font-size: .82rem;
+        font-weight: bold;
+        color: #fff;
+        width: fit-content;
+        margin-bottom: .75rem;
+        letter-spacing: .03em;
+    }
+
+    .self-pay-menu-name {
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: #1a1a1a;
+        line-height: 1.55;
+        letter-spacing: .02em;
+    }
+
+    .self-pay-menu-sub {
+        margin-top: .5rem;
+        font-size: .82rem;
+        color: #888;
+        letter-spacing: .02em;
+    }
+}
+
+/* カラーテーマ（上ボーダー＋バッジ） */
+.card--laser {
+    border-top-color: #b5451b;
+    .self-pay-menu-badge { background: #b5451b; }
+}
+.card--placenta {
+    border-top-color: #b5607a;
+    .self-pay-menu-badge { background: #b5607a; }
+}
+.card--shiratama {
+    border-top-color: #7060b8;
+    .self-pay-menu-badge { background: #7060b8; }
+}
+.card--ninniku {
+    border-top-color: #7a8c2e;
+    .self-pay-menu-badge { background: #7a8c2e; }
+}
+.card--vitamin {
+    border-top-color: #2e7a8c;
+    .self-pay-menu-badge { background: #2e7a8c; }
+}
+
+
+/* ===========================
+   CTA
+=========================== */
+.self-pay-cta {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--sub-color);
+    border-radius: 1rem;
+
+    p {
+        color: #444;
+        margin-bottom: .75rem;
+        font-size: .95rem;
+    }
+}
+
+.self-pay-cta-tel {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--main-color);
+    text-decoration: none;
+    letter-spacing: .05em;
+    margin-bottom: 1.25rem;
+
+    img { width: 22px; }
+}
+
+.self-pay-cta-back {
+    display: block;
+    margin-top: .5rem;
+    color: #888;
+    font-size: .9rem;
+    text-decoration: none;
+
+    &:hover { color: var(--main-color); }
+}
+
+
+/* ===========================
+   レスポンシブ（SP: 1列）
+=========================== */
+@media (max-width: 768px) {
+
+    .self-pay-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .self-pay-menu-card {
+        min-height: 110px;
+        padding: 1.3rem 1.4rem 1.2rem;
+
+        .self-pay-menu-name {
+            font-size: 1.05rem;
+        }
+    }
+
+    .self-pay-cta-tel {
+        font-size: 1.35rem;
+    }
+}

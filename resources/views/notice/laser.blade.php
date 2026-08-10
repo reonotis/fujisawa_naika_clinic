@@ -4,6 +4,13 @@
     @vite('resources/scss/notice-detail.scss')
 @endpush
 
+@section('breadcrumb')
+    @include('layouts.partials.breadcrumb', ['crumbs' => [
+        ['label' => '自費診療', 'url' => route('self_pay')],
+        ['label' => '医療用レーザー治療のご案内'],
+    ]])
+@endsection
+
 @section('content')
 
     <div class="container">
@@ -11,7 +18,6 @@
             <h1>当院からのお知らせ</h1>
 
             <h2>医療用レーザー治療のご案内</h2>
-            <p class="notice-lead">詳細はポスターをご覧ください</p>
 
             <div class="notice-img">
                 <img src="{{ asset('images/notice/laser-treatment-summer.jpg') }}" alt="医療用レーザー治療のご案内">

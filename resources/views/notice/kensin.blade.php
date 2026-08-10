@@ -4,6 +4,13 @@
     @vite('resources/scss/notice-detail.scss')
 @endpush
 
+@section('breadcrumb')
+    @include('layouts.partials.breadcrumb', ['crumbs' => [
+        ['label' => 'お知らせ'],
+        ['label' => '流山市特定健診と肝炎ウイルス検診のご案内'],
+    ]])
+@endsection
+
 @section('content')
 
     <div class="container">

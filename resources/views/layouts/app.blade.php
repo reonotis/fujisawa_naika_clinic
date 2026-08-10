@@ -25,6 +25,7 @@
     @include('layouts.partials.header')
 
     <main>
+        @yield('breadcrumb')
         @yield('content')
     </main>
 

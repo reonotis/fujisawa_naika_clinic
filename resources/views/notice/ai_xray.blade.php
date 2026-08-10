@@ -4,6 +4,13 @@
     @vite('resources/scss/notice-detail.scss')
 @endpush
 
+@section('breadcrumb')
+    @include('layouts.partials.breadcrumb', ['crumbs' => [
+        ['label' => 'お知らせ'],
+        ['label' => '胸部レントゲンにAI機能を搭載しました'],
+    ]])
+@endsection
+
 @section('content')
 
     <div class="container">

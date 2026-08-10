@@ -4,6 +4,13 @@
     @vite('resources/scss/notice-detail.scss')
 @endpush
 
+@section('breadcrumb')
+    @include('layouts.partials.breadcrumb', ['crumbs' => [
+        ['label' => '自費診療', 'url' => route('self_pay')],
+        ['label' => '白玉注射'],
+    ]])
+@endsection
+
 @section('content')
 
     <div class="container">

@@ -30,7 +30,7 @@
     </section>
 
     {{-- 自費診療 --}}
-    <section>
+    <section id="self_pay">
         @include('layouts.partials.self_pay')
     </section>
 

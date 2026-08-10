@@ -4,6 +4,12 @@
     @vite('resources/scss/endoscopy.scss')
 @endpush
 
+@section('breadcrumb')
+    @include('layouts.partials.breadcrumb', ['crumbs' => [
+        ['label' => '内視鏡検査'],
+    ]])
+@endsection
+
 @section('content')
 
     {{-- ヒーローエリア --}}
