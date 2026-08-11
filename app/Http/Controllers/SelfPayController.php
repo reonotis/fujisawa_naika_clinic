@@ -11,8 +11,4 @@ class SelfPayController extends Controller
         return view('notice.' . $type);
     }
 
-    public function others()
-    {
-        return view('self_pay.others');
-    }
 }

@@ -21,7 +21,6 @@ Route::prefix('self-pay')->group(function () {
 
     Route::get('laser', [SelfPayController::class, 'index'])->defaults('type', 'laser')->name('laser_notice');
     Route::get('shiratama', [SelfPayController::class, 'index'])->defaults('type', 'shiratama')->name('shiratama_notice');
-    Route::get('others', [SelfPayController::class, 'others'])->name('self_pay_others');
 });
 
 
