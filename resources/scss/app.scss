@@ -455,6 +455,47 @@ section.reveal-section {
 
 
 /*****************
+* バナー
+*****************/
+.banner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    & > .banner-item {
+        max-width: 630px;
+        aspect-ratio: 2 / 1;
+        display: block;
+        border-radius: .75rem;
+        overflow: hidden;
+        box-shadow: 5px 5px 24px 5px #BFC8CF3C,
+                    -5px -5px 8px 5px #BFC8CF3C;
+        transition: transform .18s ease, box-shadow .18s ease;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-list {
+        & > .banner-item {
+            flex-basis: 100%;
+        }
+    }
+}
+
+
+/*****************
 * お知らせ
 *****************/
 .news-list {
@@ -805,7 +846,7 @@ section.reveal-section {
     overflow: hidden;
 
     &::after {
-        content: '›';
+        content: 'click ›';
         position: absolute;
         bottom: 1.2rem;
         right: 1.4rem;
@@ -828,7 +869,7 @@ section.reveal-section {
         display: inline-block;
         padding: .28rem 1rem;
         border-radius: 99px;
-        font-size: .82rem;
+        font-size: 1.2rem;
         font-weight: bold;
         color: #fff;
         width: fit-content;
@@ -854,7 +895,7 @@ section.reveal-section {
 
 .card--laser {
     border-top-color: #b5451b;
-    //background-image: linear-gradient(to right, #fff 0%, #fff 15%, rgba(255, 255, 255, 0) 60%), url('/images/btn/pexels-shvetsa-4586726.jpg');
+    background-image: linear-gradient(to right, #fff 0%, #fff 15%, rgba(255, 255, 255, 0) 60%), url('/images/btn/pexels-shvetsa-4586726.jpg');
     background-position: 20% 70%;
     background-size: 125% auto;
     background-repeat: no-repeat;
@@ -867,6 +908,11 @@ section.reveal-section {
 }
 .card--shiratama {
     border-top-color: #7060b8;
+    background-image: linear-gradient(to right, #fff 0%, #fff 15%, rgba(255, 255, 255, 0) 60%), url('/images/btn/shiratama.png');
+    background-position: 20% 45%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
     .self-pay-menu-badge { background: #7060b8; }
 }
 .card--ninniku {

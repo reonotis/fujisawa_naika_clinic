@@ -13,6 +13,11 @@
     </section>
 
     {{-- お知らせ --}}
+    <section id="banner">
+        @include('layouts.partials.banner')
+    </section>
+
+    {{-- お知らせ --}}
     <section id="news">
         @include('layouts.partials.news')
     </section>
