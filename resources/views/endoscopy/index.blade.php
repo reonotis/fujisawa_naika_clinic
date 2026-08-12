@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', '胃カメラ・大腸カメラ（内視鏡検査）のご案内｜流山市 藤澤内科クリニック')
+@section('description', '内視鏡専門医による苦痛の少ない胃カメラ・大腸カメラ。女性医師の大腸内視鏡（月・火）、鎮静剤対応、日帰りポリープ切除も。流山市の藤澤内科クリニック。')
+
 @push('scripts')
     @vite('resources/scss/endoscopy.scss')
 @endpush

@@ -7,6 +7,8 @@
 
     @include('layouts.partials.navigation')
 
+    <h1 class="sr-only">藤澤内科クリニック｜流山市の内科・胃カメラ(胃内視鏡検査)</h1>
+
     {{-- ヒーロー画像スライドショー --}}
     <section class="hero-slideshow">
         @include('layouts.partials.hero-slideshow')

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'マイナ保険証・診療体制のご案内｜藤澤内科クリニック')
+@section('description', 'マイナ保険証利用やジェネリック医薬品対応など、藤澤内科クリニックの診療体制に関する加算・取り組みのお知らせ。')
+
 @push('scripts')
     @vite('resources/scss/notice-detail.scss')
 @endpush

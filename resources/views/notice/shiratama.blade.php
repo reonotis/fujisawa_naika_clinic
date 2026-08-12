@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', '白玉注射（グルタチオン点滴）｜流山市 藤澤内科クリニック')
+@section('description', '美白・美肌・抗酸化ケアの白玉注射（グルタチオン点滴）3,800円〜。ビタミンC追加オプションあり。流山市の藤澤内科クリニック。')
+
 @push('scripts')
     @vite('resources/scss/notice-detail.scss')
 @endpush

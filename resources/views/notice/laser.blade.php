@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', '医療用レーザー治療（しみ・肝斑治療）｜流山市 藤澤内科クリニック')
+@section('description', '藤澤内科クリニックの医療用レーザー治療（しみ・肝斑治療）のご案内。流山市でしみ治療をお考えの方はお気軽にご相談ください。')
+
 @push('scripts')
     @vite('resources/scss/notice-detail.scss')
 @endpush

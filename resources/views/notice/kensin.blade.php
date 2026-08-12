@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', '流山市特定健診・肝炎ウイルス検診のご案内｜藤澤内科クリニック')
+@section('description', '流山市特定健診・後期高齢者健診と肝炎ウイルス検診を実施中。自己負担1,000円（65歳以上無料）、予約不要。藤澤内科クリニック。')
+
 @push('scripts')
     @vite('resources/scss/notice-detail.scss')
 @endpush

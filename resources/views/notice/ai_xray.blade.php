@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'AI画像診断支援ソフト導入のお知らせ｜藤澤内科クリニック')
+@section('description', 'AI画像診断支援ソフト「CXR Finding-i」導入で、胸部レントゲンの精度と早期発見力が向上。藤澤内科クリニックのお知らせ。')
+
 @push('scripts')
     @vite('resources/scss/notice-detail.scss')
 @endpush
