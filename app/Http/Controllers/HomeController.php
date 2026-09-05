@@ -61,57 +61,6 @@ class HomeController extends Controller
             [],
         ];
 
-        $data_8 = [
-            // 第1週（月〜金は対象月外）
-            [],
-            [],
-            [],
-            [],
-            [],
-            ['date' => '2026-08-01', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-08-02', 'close' => '休診日'],
-            // 第2週
-            ['date' => '2026-08-03', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-08-04', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-08-05', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-08-06', 'close' => '休診日'],
-            ['date' => '2026-08-07', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-08-08', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-08-09', 'close' => '休診日'],
-            // 第3週（お盆期間も通常診療）
-            ['date' => '2026-08-10', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-08-11', 'close' => '山の日'],
-            ['date' => '2026-08-12', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-08-13', 'close' => '休診日'],
-            ['date' => '2026-08-14', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-08-15', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-08-16', 'close' => '休診日'],
-            // 第4週（8/20〜夏期休暇）
-            ['date' => '2026-08-17', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-08-18', 'am' => 'alise', 'pm' => 'alise'],
-            ['date' => '2026-08-19', 'am' => 'alise', 'pm' => 'sekiguchi'],
-            ['date' => '2026-08-20', 'close' => '夏期休暇'],
-            ['date' => '2026-08-21', 'close' => '夏期休暇'],
-            ['date' => '2026-08-22', 'close' => '夏期休暇'],
-            ['date' => '2026-08-23', 'close' => '夏期休暇'],
-            // 第5週（〜8/27夏期休暇）
-            ['date' => '2026-08-24', 'close' => '夏期休暇'],
-            ['date' => '2026-08-25', 'close' => '夏期休暇'],
-            ['date' => '2026-08-26', 'close' => '夏期休暇'],
-            ['date' => '2026-08-27', 'close' => '夏期休暇'],
-            ['date' => '2026-08-28', 'am' => 'alise', 'pm' => 'fukushima'],
-            ['date' => '2026-08-29', 'am' => 'matsubara', 'pm' => 'off'],
-            ['date' => '2026-08-30', 'close' => '休診日'],
-            // 第6週
-            ['date' => '2026-08-31', 'am' => 'alise', 'pm' => 'alise'],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-        ];
-
         $data_9 = [
             // 第1週（月は対象月外）
             [],
@@ -155,9 +104,52 @@ class HomeController extends Controller
             [],
         ];
 
+        $data_10 = [
+            // 第1週（月〜水は対象月外）
+            [],
+            [],
+            [],
+            ['date' => '2026-10-01', 'close' => '休診日'],
+            ['date' => '2026-10-02', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-10-03', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-10-04', 'close' => '休診日'],
+            // 第2週
+            ['date' => '2026-10-05', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-06', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-07', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-10-08', 'close' => '休診日'],
+            ['date' => '2026-10-09', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-10-10', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-10-11', 'close' => '休診日'],
+            // 第3週（スポーツの日は休診）
+            ['date' => '2026-10-12', 'close' => 'スポーツの日'],
+            ['date' => '2026-10-13', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-14', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-10-15', 'close' => '休診日'],
+            ['date' => '2026-10-16', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-10-17', 'am' => 'matsubara', 'pm' => 'off'],
+            ['date' => '2026-10-18', 'close' => '休診日'],
+            // 第4週
+            ['date' => '2026-10-19', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-20', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-21', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-10-22', 'close' => '休診日'],
+            ['date' => '2026-10-23', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-10-24', 'am' => 'alise', 'pm' => 'off'],
+            ['date' => '2026-10-25', 'close' => '休診日'],
+            // 第5週（日は対象月外）
+            ['date' => '2026-10-26', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-27', 'am' => 'alise', 'pm' => 'alise'],
+            ['date' => '2026-10-28', 'am' => 'alise', 'pm' => 'sekiguchi'],
+            ['date' => '2026-10-29', 'close' => '休診日'],
+            ['date' => '2026-10-30', 'am' => 'alise', 'pm' => 'fukushima'],
+            ['date' => '2026-10-31', 'am' => 'matsubara', 'pm' => 'off'],
+            [],
+        ];
+
         return [
-            '2026-08' => $data_8,
             '2026-09' => $data_9,
+            '2026-10' => $data_10,
         ];
     }
 }
