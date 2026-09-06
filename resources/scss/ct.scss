@@ -404,7 +404,17 @@
     }
 
     .ct-intro-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
         padding: 2rem 1.5rem;
+    }
+
+    .ct-intro-body h2 {
+        font-size: 1.6rem;
+    }
+
+    .ct-intro-img {
+        order: -1;
     }
 
     .ct-section-head {
