@@ -27,6 +27,7 @@ export default defineConfig({
                 'resources/scss/notice-detail.scss',
                 'resources/scss/endoscopy.scss',
                 'resources/scss/self-pay.scss',
+                'resources/scss/ct.scss',
             ],
             refresh: true,
         }),

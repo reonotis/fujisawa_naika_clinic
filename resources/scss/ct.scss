@@ -1,0 +1,443 @@
+/* ヒーロー */
+.ct-hero {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ct-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(20, 35, 60, .35) 0%, rgba(20, 35, 60, .68) 100%);
+    }
+
+    .ct-hero-text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .ct-hero-badge {
+        display: inline-block;
+        padding: .4rem 1.1rem;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .2em;
+        color: #fff;
+        background: rgba(255, 255, 255, .16);
+        border: 1px solid rgba(255, 255, 255, .5);
+        border-radius: 999px;
+        backdrop-filter: blur(2px);
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.1rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+    }
+}
+
+/* ページ全体 */
+.ct-page {
+    padding-bottom: 2rem;
+}
+
+/* セクション見出し（中央寄せ・アイボリー付き） */
+.ct-section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.75rem;
+}
+
+.ct-eyebrow {
+    display: inline-block;
+    padding: .35rem 1rem;
+    margin-bottom: .9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    color: var(--main-color);
+    background: var(--sub-color);
+    border-radius: 999px;
+}
+
+.ct-section-head h2 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #1e3a5f;
+}
+
+/* カード共通の浮遊感シャドウ */
+@mixin ct-card-shadow {
+    box-shadow: 0 2px 6px rgba(30, 58, 95, .05), 0 10px 30px rgba(30, 58, 95, .07);
+}
+
+/* 院長からのご案内 */
+.ct-intro {
+    margin-top: 4.5rem;
+}
+
+.ct-intro-card {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2.75rem 1.5rem;
+    background: var(--sub-color);
+    border-radius: 20px;
+}
+
+.ct-intro-body {
+    .ct-eyebrow {
+        background: #fff;
+    }
+
+    h2 {
+        margin: 0 0 1.25rem;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1e3a5f;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    p + p {
+        margin-top: .9rem;
+    }
+}
+
+.ct-intro-img {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(30, 58, 95, .12);
+    }
+}
+
+/* このような症状・ご不安がある方はご相談ください */
+.ct-symptoms {
+    margin-top: 5.5rem;
+}
+
+.ct-symptom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.ct-symptom-card {
+    position: relative;
+    padding: 1.9rem 1.9rem 1.75rem;
+    background: #fff;
+    border-radius: 16px;
+    @include ct-card-shadow;
+
+    &--wide {
+        grid-column: 1 / -1;
+    }
+
+    .ct-symptom-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        margin-bottom: .9rem;
+        font-size: .9rem;
+        font-weight: 700;
+        color: #fff;
+        background: var(--main-color);
+        border-radius: 50%;
+    }
+
+    h3 {
+        margin: 0 0 .75rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1e3a5f;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 1.1rem;
+            font-size: .92rem;
+            line-height: 1.8;
+            color: #4a5568;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: .7em;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #b9d4ef;
+            }
+
+            & + li {
+                margin-top: .4rem;
+            }
+        }
+    }
+}
+
+/* 当院のCT検査の特徴 */
+.ct-features {
+    margin-top: 5.5rem;
+
+    .ct-eyebrow {
+        background: #fff;
+    }
+}
+
+.ct-feature-grid {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.ct-feature-card {
+    padding: 2rem 1.75rem;
+    background: #fff;
+    border-radius: 16px;
+    @include ct-card-shadow;
+    transition: transform .2s ease, box-shadow .2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 10px rgba(30, 58, 95, .06), 0 16px 36px rgba(30, 58, 95, .12);
+    }
+
+    .ct-feature-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1.1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: serif;
+        color: var(--main-color);
+        background: var(--sub-color);
+        border-radius: 12px;
+    }
+
+    h3 {
+        margin: 0 0 .75rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #1e3a5f;
+    }
+
+    p {
+        margin: 0;
+        font-size: .9rem;
+        line-height: 1.85;
+        color: #4a5568;
+    }
+}
+
+/* CT検査費用 */
+.ct-fee {
+    margin-top: 5.5rem;
+}
+
+.ct-fee-panel {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--sub-color);
+    border-radius: 20px;
+}
+
+.ct-fee-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.ct-fee-card {
+    padding: 1.9rem 1.25rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    @include ct-card-shadow;
+
+    .ct-fee-card-label {
+        font-size: .92rem;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 1rem;
+    }
+
+    .ct-fee-card-price {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: .25rem;
+        color: var(--main-color);
+
+        .amount {
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: .02em;
+        }
+
+        .unit {
+            font-size: .95rem;
+            font-weight: 700;
+        }
+    }
+
+    .ct-fee-card-sub {
+        margin-top: .5rem;
+        font-size: .78rem;
+        color: #7a8699;
+    }
+}
+
+.ct-fee-notes {
+    margin-top: 1.5rem;
+
+    p {
+        font-size: .85rem;
+        line-height: 1.85;
+        color: #5a6577;
+    }
+
+    p + p {
+        margin-top: .35rem;
+    }
+}
+
+/* CTAエリア */
+.ct-cta {
+    margin: 6rem 0 8rem;
+    padding: 3rem;
+    background: var(--sub-color);
+    border-radius: 20px;
+    text-align: center;
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #555;
+    }
+
+    .ct-cta-tel {
+        display: inline-flex;
+        align-items: center;
+        gap: .75rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--main-color);
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 36px;
+        }
+    }
+
+    .ct-cta-back {
+        display: block;
+        font-size: .9rem;
+        color: #666;
+        text-decoration: underline;
+        margin-top: .5rem;
+
+        &:hover {
+            color: var(--main-color);
+        }
+    }
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+    .ct-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .ct-hero {
+        height: 260px;
+
+        h1 { font-size: 1.5rem; }
+    }
+
+    .ct-intro,
+    .ct-symptoms,
+    .ct-features,
+    .ct-fee {
+        margin-top: 3rem;
+    }
+
+    .ct-intro-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .ct-section-head {
+        margin-bottom: 2rem;
+    }
+
+    .ct-section-head h2 {
+        font-size: 1.35rem;
+    }
+
+    .ct-symptom-grid,
+    .ct-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-symptom-card--wide {
+        grid-column: auto;
+    }
+
+    .ct-fee-panel {
+        padding: 2rem 1.25rem;
+    }
+
+    .ct-fee-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-cta {
+        padding: 2rem 1rem;
+        margin: 3rem 0 5rem;
+
+        .ct-cta-tel {
+            font-size: 1.4rem;
+        }
+    }
+}

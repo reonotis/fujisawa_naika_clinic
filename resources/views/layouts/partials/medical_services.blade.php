@@ -47,6 +47,14 @@
                 <p>ワクチン（予防接種）インフルエンザ、肺炎球菌、新型コロナウイルスなど各種ワクチン接種を行っています。流山市の助成対象ワクチンについてもお気軽にご相談ください。</p>
             </div>
         </article>
+        <article class="services-item services-item--linked">
+            <a href="{{ route('ct') }}" class="services-link-overlay" aria-label="CT検査の詳細ページへ"></a>
+            <div class="item-title"><div class="svg">{{ svg('ri-body-scan-line') }}</div>CT検査（迅速・即日検査対応）</div>
+            <div class="item-text">
+                <p>当院では院内CTを導入しており、必要に応じて受診当日の迅速な撮影・診断が可能です。長引く咳、急な腹痛、頭痛の精密検査のほか、肺がん・腹部臓器疾患の早期発見にも対応しています。検査のご希望や気になる症状はお気軽にご相談ください。</p>
+                <a href="{{ route('ct') }}" class="services-detail-link">CT検査の特徴を見る →</a>
+            </div>
+        </article>
     </div>
 </div>
 

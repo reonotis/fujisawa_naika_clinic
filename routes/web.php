@@ -14,6 +14,10 @@ Route::get('/endoscopy', function () {
     return view('endoscopy.index');
 })->name('endoscopy');
 
+Route::get('/ct', function () {
+    return view('ct.index');
+})->name('ct');
+
 Route::prefix('self-pay')->group(function () {
     Route::get('/', function () {
         return view('self_pay.index');
