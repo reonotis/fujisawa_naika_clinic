@@ -21,6 +21,8 @@
         .table th, .table td { padding: 10px 12px; border-bottom: 1px solid #e3e7ea; text-align: left; }
         .table th { background: #f3f5f7; }
         .flash { padding: 10px 14px; margin-bottom: 16px; background: #e6f4ea; color: #1e6b34; border-radius: 4px; }
+        .flash.is-fading { opacity: 0; transition: opacity 2s ease; }
+        .flash.is-hidden { display: none; }
         .field input[type=text], .field input[type=date], .field select { width: 100%; padding: 10px; border: 1px solid #bbb; border-radius: 4px; font-size: 16px; background: #fff; }
         .admin-main { max-width: 960px; margin: 32px auto; padding: 0 16px; }
         .card { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 1px 4px rgba(0, 0, 0, .1); }
@@ -34,5 +36,16 @@
 </head>
 <body>
     @yield('body')
+    <script>
+        // 保存成功メッセージは3秒表示してから、2秒かけてフェードアウトして消す
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.flash').forEach(function (flash) {
+                setTimeout(function () {
+                    flash.classList.add('is-fading');
+                    setTimeout(function () { flash.classList.add('is-hidden'); }, 2000);
+                }, 3000);
+            });
+        });
+    </script>
 </body>
 </html>

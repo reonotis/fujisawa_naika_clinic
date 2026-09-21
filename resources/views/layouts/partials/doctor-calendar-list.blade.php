@@ -6,6 +6,9 @@
     <div class="doctor-calendar-container" data-current-month="4">
         <h2 data-en="SCHEDULE">外来担当医表</h2>
 
+        @if (empty($doctor_calendar_data))
+            <p class="doctor-calendar-empty">現在公開されているスケジュールはありません</p>
+        @else
         <div class="doctor-calendar-nav">
             <button type="button" class="doctor-calendar-arrow doctor-calendar-prev" aria-label="前の月">
                 ‹
@@ -44,6 +47,7 @@
                 <p>※金曜午後担当の副島先生は循環器、また糖尿病にも非常にお詳しい先生です。</p>
             </div>
         </div>
+        @endif
 
     </div>
 </div>

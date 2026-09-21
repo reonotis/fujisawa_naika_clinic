@@ -52,6 +52,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('news/{news}/edit', [AdminNewsController::class, 'edit'])->name('news.edit');
         Route::put('news/{news}', [AdminNewsController::class, 'update'])->name('news.update');
         Route::get('doctor-calendar', [AdminDoctorCalendarController::class, 'index'])->name('doctor_calendar.index');
+        Route::post('doctor-calendar/publications', [AdminDoctorCalendarController::class, 'storePublication'])->name('doctor_calendar.publications.store');
+        Route::put('doctor-calendar/publications/{publication}', [AdminDoctorCalendarController::class, 'updatePublication'])->name('doctor_calendar.publications.update');
+        Route::delete('doctor-calendar/publications/{publication}', [AdminDoctorCalendarController::class, 'destroyPublication'])->name('doctor_calendar.publications.destroy');
+        Route::put('doctor-calendar/doctors/reorder', [AdminDoctorCalendarController::class, 'reorderDoctors'])->name('doctor_calendar.doctors.reorder');
+        Route::post('doctor-calendar/doctors',[AdminDoctorCalendarController::class, 'storeDoctor'])->name('doctor_calendar.doctors.store');
+        Route::put('doctor-calendar/doctors/{doctor}', [AdminDoctorCalendarController::class, 'updateDoctor'])->name('doctor_calendar.doctors.update');
+        Route::put('doctor-calendar/weekly', [AdminDoctorCalendarController::class, 'updateWeekly'])->name('doctor_calendar.weekly.update');
+        Route::post('doctor-calendar/overrides', [AdminDoctorCalendarController::class, 'saveOverride'])->name('doctor_calendar.overrides.save');
+        Route::delete('doctor-calendar/overrides/{override}', [AdminDoctorCalendarController::class, 'destroyOverride'])->name('doctor_calendar.overrides.destroy');
+        Route::post('doctor-calendar/holidays', [AdminDoctorCalendarController::class, 'storeHoliday'])->name('doctor_calendar.holidays.store');
+        Route::delete('doctor-calendar/holidays/{holiday}', [AdminDoctorCalendarController::class, 'destroyHoliday'])->name('doctor_calendar.holidays.destroy');
         Route::post('logout', [AdminLoginController::class, 'logout'])->name('logout');
     });
 });

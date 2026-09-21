@@ -3,6 +3,13 @@
 .doctor-calendar-container {
     max-width: 100%;
 
+    & > .doctor-calendar-empty {
+        text-align: center;
+        padding: 3rem 1rem;
+        font-size: 1.1rem;
+        color: #666;
+    }
+
     & > .doctor-calendar-nav {
         display: flex;
         align-items: center;
