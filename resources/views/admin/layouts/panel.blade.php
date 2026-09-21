@@ -13,6 +13,7 @@
         <nav class="admin-sidebar">
             <a href="{{ route('admin.news.index') }}" @class(['active' => request()->routeIs('admin.news.*')])>お知らせ</a>
             <a href="{{ route('admin.doctor_calendar.index') }}" @class(['active' => request()->routeIs('admin.doctor_calendar.*')])>外来担当医表</a>
+            <a href="{{ route('admin.users.index') }}" @class(['active' => request()->routeIs('admin.users.*')])>ユーザー</a>
         </nav>
         <main class="admin-content">
             <div class="card">
