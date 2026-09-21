@@ -35,7 +35,7 @@
         .dc-row.overrides { grid-template-columns: 150px 1fr 1fr 90px 1fr auto; }
         .dc-subhead { font-size: 15px; margin: 0 0 8px; }
         .dc-row input[type=date] { width: 100%; padding: 6px; border: 1px solid #bbb; border-radius: 4px; font-size: 14px; }
-        .dc-pub-row { cursor: pointer; }
+        .dc-pub-row { cursor: pointer; padding-left: 12px; }
         .dc-pub-row:hover { background: #f5f9fb; }
         .dc-pub-row.selected { background: #e3f0f7; box-shadow: inset 4px 0 0 #2c5f7c; }
         .dc-preview { margin-top: 28px; }
