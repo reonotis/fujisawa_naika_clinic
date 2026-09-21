@@ -21,7 +21,7 @@
 
     {{-- お知らせ --}}
     <section id="news">
-        @include('layouts.partials.news')
+        @include('layouts.partials.news', ['news' => $news])
     </section>
 
     {{-- 外来担当医表 --}}

@@ -4,14 +4,19 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Repositories\NewsRepository;
+
 class HomeController extends Controller
 {
-    public function __invoke()
+    public function __invoke(NewsRepository $newsRepository)
     {
 
         $doctor_calendar_data = $this->makeDoctorCalendarData();
 
+        $news = $newsRepository->getPublished();
+
         return view('welcome', [
+            'news' => $news,
             'doctor_calendar_data' => $doctor_calendar_data,
         ]);
     }
