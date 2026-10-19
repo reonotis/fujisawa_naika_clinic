@@ -5,7 +5,7 @@
 @php
     $banners = [
         [
-            'image' => 'images/banner/laser-banner.png',
+            'image' => 'images/banner/laser-banner.png?v=2',
             'alt' => '医療用レーザー治療のご案内',
             'route' => 'laser_notice',
         ],
