@@ -23,11 +23,11 @@
             <h2>医療用レーザー治療のご案内</h2>
 
             <div class="notice-img">
-                <img src="{{ asset('images/notice/laser-treatment-summer.jpg') }}" alt="医療用レーザー治療のご案内">
+                <img src="{{ asset('images/notice/laser-treatment-summer_2.jpg') }}" alt="医療用レーザー治療のご案内">
             </div>
 
             <p class="notice-pdf-link">
-                <a href="{{ asset('pdf/laser-treatment-summer.pdf') }}" target="_blank" rel="noopener">PDFをダウンロード</a>
+                <a href="{{ asset('pdf/laser-treatment-summer_2.pdf') }}" target="_blank" rel="noopener">PDFをダウンロード</a>
             </p>
 
             <p class="notice-clinic">
