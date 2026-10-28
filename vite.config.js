@@ -6,12 +6,12 @@ export default defineConfig({
         host: '0.0.0.0',
         port: 5173,
         strictPort: true,
-        origin: 'http://localhost:5174',
+        origin: 'http://localhost:5175',
         cors: true,
         hmr: {
             host: 'localhost',
             port: 5173,
-            clientPort: 5174,
+            clientPort: 5175,
             protocol: 'ws',
         },
         watch: {
