@@ -1,156 +1,278 @@
 @extends('layouts.app')
 
-@section('title', 'メディカルダイエット・肥満外来（自費診療）｜流山市 藤澤内科クリニック')
-@section('description', '消化器内科医が対面で診察するメディカルダイエット・肥満外来（自費診療）のご案内。マンジャロ・リベルサスの料金、処方・通院についてご案内します。藤澤内科クリニック。')
+@section('title', 'メディカルダイエット（自費診療）｜流山市 藤澤内科クリニック')
+@section('description', '週1回の注射で食欲をコントロールするメディカルダイエット（自費診療）のご案内。医師が対面で診察し、副作用の対応まで担当します。院内にCT・腹部エコーがあり、もしものときもすぐに検査できます。藤澤内科クリニック。')
 
 @push('scripts')
-    @vite('resources/scss/notice-detail.scss')
+    @vite('resources/scss/diet.scss')
 @endpush
 
 @section('breadcrumb')
     @include('layouts.partials.breadcrumb', ['crumbs' => [
         ['label' => '自費診療', 'url' => route('self_pay')],
-        ['label' => 'メディカルダイエット・肥満外来'],
+        ['label' => 'メディカルダイエット'],
     ]])
 @endsection
 
 @section('content')
+<div class="diet">
 
-    <div class="container">
-        <div class="notice-container">
-            <h1>当院からのお知らせ</h1>
+    {{-- ヒーロー --}}
+    <section class="diet-hero">
+        <div class="diet-inner">
+            <div class="diet-hero__text">
+                <p class="diet-hero__label">メディカルダイエット（自費診療）</p>
+                <h1>週<span class="diet-num">1</span>回の注射で<br>食欲をコントロール！</h1>
+                <p class="diet-hero__lead">医師が診察から副作用の対応まで担当。院内にCT・腹部エコーがあるので、もしものときもすぐに検査できます。</p>
+            </div>
+            <div class="diet-hero__cards">
+                <div class="diet-hero__card diet-hero__card--price">
+                    <p>初回4本</p>
+                    <p class="diet-num">16,500<small>円～</small></p>
+                </div>
+                <div class="diet-hero__card">
+                    <p>注射は</p>
+                    <p>週1回</p>
+                </div>
+                <div class="diet-hero__card">
+                    <p>お薬は</p>
+                    <p>院内処方</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h2>メディカルダイエット・肥満外来（自費診療）</h2>
-            <p class="notice-lead">「健診で数値を指摘された方」「将来の病気を本気で予防したい方へ」</p>
-
+    {{-- はじめに --}}
+    <section class="diet-intro">
+        <div class="diet-inner">
+        <div class="diet-head">
+            <span class="diet-eyebrow">INTRODUCTION</span>
+            <h2>肥満は、見た目だけの問題ではありません</h2>
+        </div>
+        <div class="diet-intro__box">
             <p>日々の内科外来において、「糖尿病の確定診断には該当しないものの、肥満や体重増加に伴って血圧やコレステロール、中性脂肪が上がり、生活習慣病の悪化を認める方」を数多く拝見してまいりました。</p>
             <p>肥満は見た目だけの問題ではなく、動脈硬化を進行させ、心筋梗塞や脳卒中、血管合併症を引き起こす大きなリスク因子です。健康診断などで軽度の数値を指摘された早い段階で適切な減量（ダイエット）を行うことは、将来的な病気の発症や重症化を防ぐための効果的な予防医療となります。</p>
             <p>しかし、自己流の食事制限や激しい運動は長続きせず、リバウンドを繰り返してしまう方も少なくありません。</p>
-            <p>そこで当院では、医学的根拠に基づいた医薬品の力を適切に活用し、無理のない健康的な体重コントロールをサポートする「メディカルダイエット外来（自費診療）」を開設いたしました。</p>
+            <p>そこで当院では、医学的根拠に基づいた医薬品の力を適切に活用し、無理のない健康的な体重コントロールをサポートする<strong>「メディカルダイエット外来（自費診療）」</strong>を開設いたしました。</p>
+        </div>
+        </div>
+    </section>
 
-            <h3>医師が対面で診察・適応を判断する安心感</h3>
-            <p>当院のメディカルダイエットは、医師が対面で診察し、お一人おひとりの健康状態に合わせて適応を判断した上で健康管理を行います。</p>
-
-            <h4>医学的根拠に基づいた適応判断</h4>
-            <p>健診結果や生活習慣、持病、内臓脂肪の状態を詳しく確認し、お薬を使用することが本当に適切かつ安全であるかを専門医の視点で慎重に判断します。</p>
-
-            <h4>胃腸症状・副作用への細やかなフォロー</h4>
-            <p>GLP-1/GIP受容体作動薬などの治療薬は、使い始めに吐き気や便秘、胃部不快感などの消化器症状が現れることがあります。当院では消化器内科の専門知識を活かし、症状が出た場合のお薬の調整や胃腸薬の併用など、患者様が安心して治療を継続できるようきめ細やかに対応いたします。</p>
-
-            <h4>定期的な血液検査による安全管理</h4>
-            <p>単に体重を落とすだけでなく、肝機能・腎機能・膵酵素・電解質などを定期的にチェックし、体内の健康状態を損なうことなく安全に減量が進んでいるかをチェックします。</p>
-
-            <h3>なぜ「自費診療」なのか</h3>
-            <p>ダイエットや生活習慣病予防を目的とした医薬品の使用は、現在の日本の公的医療保険制度では適用が認められていません。当院で使用する薬剤（マンジャロ、リベルサス等）は本来「2型糖尿病」の治療薬として厚生労働省に承認されているためです。</p>
-            <p>しかし、海外では同等の有効成分が「肥満症治療薬」として正式に承認・活用されており、日本国内でもチルゼパチド製剤は肥満症適応の医薬品として認可されています。当院では安全性を最優先に考慮した上で、自費診療（自由診療）にて処方を行っております。</p>
-
-            <div class="notice-attention">
-                <p>※BMIが19未満の方、未成年の方は、安全上の理由から処方をお断りさせていただく場合がございます。</p>
-                <p>※当院では、公的保険適用の肥満症外来（ウゴービ等）は取り扱っておりません。</p>
+    {{-- こんな方に --}}
+    <section class="diet-section">
+        <div class="diet-inner">
+            <div class="diet-head">
+                <span class="diet-eyebrow">RECOMMEND</span>
+                <h2>こんな方におすすめ</h2>
             </div>
+            <ul class="diet-checks">
+                <li>食事療法・運動療法を続けても体重が減らない</li>
+                <li>健診で体重や血液検査の数値を指摘された</li>
+                <li>高血圧・脂質異常症・糖尿病を指摘されている</li>
+                <li>副作用が心配で、近くの内科で相談したい</li>
+            </ul>
+        </div>
+    </section>
 
-            <h3>主な治療薬</h3>
-            <p>当院では、GLP-1/GIP受容体作動薬を中心とした治療をご提案しております。患者様の体質や目標、生活スタイルに合わせて最適な治療法を選択いたします。<br>
-                <small>（※患者様の状態やご希望に応じ、SGLT2阻害薬やメトホルミンなどのサポート薬の併用についても診察時にご相談いただけます）</small></p>
-
-            <div class="notice-drug-cards">
-                <div class="notice-drug-card">
-                    <span class="notice-drug-card__tag">注射 / 週1回</span>
-                    <h4>マンジャロ</h4>
+    {{-- 治療とお薬 --}}
+    <section class="diet-band">
+        <div class="diet-inner">
+            <div class="diet-head">
+                <span class="diet-eyebrow">TREATMENT</span>
+                <h2>この治療について</h2>
+            </div>
+            <p class="diet-band__lead">マンジャロと同成分のゼップバウンドなど、GIP/GLP-1受容体作動薬とよばれる週1回の自己注射で、食欲や満腹感に関わる2つのホルモンの働きを助けます。自然に食べる量が減り、無理なく体重を落とすことを目指します。</p>
+            <div class="diet-drugs">
+                <div class="diet-drug diet-drug--main">
+                    <p class="diet-drug__tag">注射薬 ／ 週1回</p>
+                    <h3>持続性GIP/GLP-1受容体作動薬</h3>
                     <p>食欲をしっかり抑え代謝を高める。週1回の自己注射で続けやすい。</p>
                 </div>
-                <div class="notice-drug-card">
-                    <span class="notice-drug-card__tag">内服 / 毎日起床時</span>
-                    <h4>リベルサス</h4>
-                    <p>注射が苦手な方のための飲み薬。手軽に開始可能。</p>
+                <div class="diet-drug">
+                    <p class="diet-drug__tag">内服薬 ／ 毎日起床時</p>
+                    <h3>経口GLP-1作動薬</h3>
+                    <p>注射が苦手な方のための飲み薬。</p>
                 </div>
             </div>
-
-            <h3>料金一覧（税込表示）</h3>
-            <p>当院は保険診療を基盤とする地域密着型クリニックであるため、自由診療におきましても患者様が無理なく続けられる適正価格で設定しております。</p>
-
-            <h4>1. マンジャロ皮下注（週1回・使い切りペン型注射薬）</h4>
-            <p>食欲を抑え、満腹感を持続させる世界初の持続性GIP/GLP-1受容体作動薬です。極細の針が一体型となったペン型製剤で、週に1回ご自身で皮下注射を行います。</p>
-
-            <div class="notice-price-block">
-                <figure class="notice-price-block__img">
-                    <img src="{{ asset('images/notice/diet-mounjaro.jpg') }}" alt="マンジャロ皮下注（ペン型注射薬）">
-                </figure>
-
-                <table class="notice-price-table">
-                    <tr>
-                        <th>マンジャロ 2.5mg<small>初期導入用量</small></th>
-                        <td class="notice-price-table__qty">4本（4週間分）</td>
-                        <td class="notice-price-table__price"><strong>16,500</strong>円<small>（税込）</small></td>
-                    </tr>
-                    <tr>
-                        <th>マンジャロ 5.0mg<small>標準維持用量</small></th>
-                        <td class="notice-price-table__qty">4本（4週間分）</td>
-                        <td class="notice-price-table__price"><strong>26,400</strong>円<small>（税込）</small></td>
-                    </tr>
-                    <tr>
-                        <th>マンジャロ 7.5mg<small>増量期用量</small></th>
-                        <td class="notice-price-table__qty">4本（4週間分）</td>
-                        <td class="notice-price-table__price"><strong>33,000</strong>円<small>（税込）</small></td>
-                    </tr>
-                    <tr>
-                        <th>マンジャロ 10.0mg<small>高用量</small></th>
-                        <td class="notice-price-table__qty">4本（4週間分）</td>
-                        <td class="notice-price-table__price"><strong>39,600</strong>円<small>（税込）</small></td>
-                    </tr>
-                </table>
-            </div>
-            <p><small>※アルコール綿等の消耗品費用を含みます。</small></p>
-
-            <h4>2. リベルサス錠（1日1回・内服薬）</h4>
-            <p>起床時空腹時に少量の水（120mL以下）で服用し、その後最低30分飲食を控えることで胃から吸収させる錠剤タイプです。</p>
-
-            <div class="notice-price-block">
-                <figure class="notice-price-block__img">
-                    <img src="{{ asset('images/notice/diet-rybelsus.jpg') }}" alt="リベルサス錠（内服薬）">
-                </figure>
-
-                <table class="notice-price-table">
-                    <tr>
-                        <th>リベルサス錠 3mg<small>初期導入用量</small></th>
-                        <td class="notice-price-table__qty">30錠（30日分）</td>
-                        <td class="notice-price-table__price"><strong>8,800</strong>円<small>（税込）</small></td>
-                    </tr>
-                    <tr>
-                        <th>リベルサス錠 7mg<small>標準維持用量</small></th>
-                        <td class="notice-price-table__qty">30錠（30日分）</td>
-                        <td class="notice-price-table__price"><strong>18,700</strong>円<small>（税込）</small></td>
-                    </tr>
-                    <tr>
-                        <th>リベルサス錠 14mg<small>高用量</small></th>
-                        <td class="notice-price-table__qty">30錠（30日分）</td>
-                        <td class="notice-price-table__price"><strong>27,500</strong>円<small>（税込）</small></td>
-                    </tr>
-                </table>
-            </div>
-
-            <h3>ご予約・ご相談について</h3>
-            <p>メディカルダイエットをご希望の方は、事前にお電話にてお知らせください。<br>
-                （初診時のご案内や診察の流れについてスタッフよりご説明いたします）</p>
-
-            <h3>処方・通院について</h3>
-            <ul class="notice-list">
-                <li><strong>院内処方でスムーズ</strong><br>診察後、院内にて直接お薬をお渡しいたします。</li>
-                <li><strong>まとめ処方に対応</strong><br>体調が安定している患者様には、ご希望に応じて最大3か月分までのまとめ処方が可能です。</li>
-                <li><strong>縛りのない都度処方</strong><br>定期購入の縛りやサブスクリプション契約は一切ございません。必要なときに必要な分だけ受診していただけます。</li>
-                <li><strong>他院からの継続処方</strong><br>他院ですでに処方を受けている方の継続処方も承っております（お薬手帳など用量が確認できるものをご持参ください）。</li>
-            </ul>
-
-            <h3>自由診療に関する法定記載事項（医療広告ガイドラインに基づく明示）</h3>
-            <ul class="notice-list">
-                <li><strong>未承認医薬品等であることの明示</strong><br>マンジャロ皮下注およびリベルサス錠は、日本国内において「2型糖尿病」の治療薬として承認されていますが、肥満予防・メディカルダイエット目的での使用は薬事承認されていない適応外使用（自由診療）となります。</li>
-                <li><strong>入手経路</strong><br>当院で使用する医薬品は、国内の正規医薬品卸業者を通じて適正に納入しております。</li>
-                <li><strong>同一成分や同効薬の国内承認</strong><br>国内承認されている肥満症治療薬にはウゴービ皮下注などがありますが、高度肥満症や保険適用の施設・患者要件を満たす場合に限定されます。</li>
-                <li><strong>安全性・主な副作用</strong><br>悪心、嘔吐、便秘、下痢、食欲減退、胃部不快感、低血糖、倦怠感などが報告されています。ごく稀に急性膵炎、胆嚢障害、脱水症状を認めることがあります。異常を感じた際は速やかに医師までご相談ください。</li>
-                <li><strong>副作用被害救済制度について</strong><br>承認適応外での使用によって生じた健康被害については、公的な「医薬品副作用被害救済制度」の給付対象外となる場合があります。</li>
-            </ul>
-
         </div>
-    </div>
+    </section>
 
+    {{-- 特徴 --}}
+    <section class="diet-section" style="padding-top: 3.5rem">
+        <div class="diet-inner">
+            <div class="diet-head">
+                <span class="diet-eyebrow">FEATURES</span>
+                <h2>当院の4つの特徴</h2>
+            </div>
+            <div class="diet-features">
+                <div class="diet-feature">
+                    <p class="diet-feature__num">01</p>
+                    <div>
+                        <h3>医師が対面で適応を判断</h3>
+                        <p>健診結果や持病、内臓脂肪の状態を確認し、治療が適しているかを医師が判断します。</p>
+                    </div>
+                </div>
+                <div class="diet-feature">
+                    <p class="diet-feature__num">02</p>
+                    <div>
+                        <h3>消化器の医師が副作用を診察</h3>
+                        <p>この治療では、むかつき・吐き気・便秘・下痢などの胃腸の症状が出やすくなります。症状が出たときは消化器を専門とする医師が診察し、お薬の調整や用量の見直しなど、症状に合わせて適切に対応します。</p>
+                    </div>
+                </div>
+                <div class="diet-feature">
+                    <p class="diet-feature__num">03</p>
+                    <div>
+                        <h3>定期的な血液検査</h3>
+                        <p>肝機能・腎機能・膵酵素・電解質を定期的に確認し、安全に続けられるよう管理します。</p>
+                    </div>
+                </div>
+                <div class="diet-feature">
+                    <p class="diet-feature__num">04</p>
+                    <div>
+                        <h3>院内でCT・腹部エコー検査</h3>
+                        <p>まれな副作用である胆のう炎や膵炎が疑われる腹痛などの症状があるときは、血液検査や、院内のCTや腹部エコーで検査し、状態を確認できます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 流れ --}}
+    <section class="diet-section">
+        <div class="diet-inner">
+            <div class="diet-head">
+                <span class="diet-eyebrow">FLOW</span>
+                <h2>治療の流れ</h2>
+            </div>
+            <ol class="diet-steps">
+                @foreach ([
+                    ['電話で予約', '初診の流れをご案内します。'],
+                    ['診察・検査', '問診・身体測定・血液検査で適応を判断します。'],
+                    ['注射の練習', '看護師が打ち方を説明し、院内でお薬をお渡しします。'],
+                    ['4週ごとに再診', '体重と副作用を確認し、用量を調整します。'],
+                    ['継続処方', '安定した方は最大3か月分まで処方できます。'],
+                ] as [$title, $text])
+                    <li>
+                        <p class="diet-steps__no">STEP<span>{{ $loop->iteration }}</span></p>
+                        <p class="diet-steps__title">{{ $title }}</p>
+                        <p class="diet-steps__text">{{ $text }}</p>
+                    </li>
+                @endforeach
+            </ol>
+        </div>
+    </section>
+
+    {{-- 料金 --}}
+    <section id="price" class="diet-price">
+        <div class="diet-inner">
+            <div class="diet-head">
+                <span class="diet-eyebrow">PRICE</span>
+                <h2>料金（税込）</h2>
+                <p class="diet-price__note">すべて自費診療です（公的保険を使った肥満症治療は行っていません）。</p>
+            </div>
+            <div class="diet-price__grid">
+                <div class="diet-price__card">
+                    <h3>持続性GIP/GLP-1受容体作動薬</h3>
+                    <p class="diet-price__sub">マンジャロと同成分のゼップバウンドなど（週1回注射）4本（4週間分）</p>
+                    <div class="diet-price__main">
+                        <p>2.5mg（はじめての方）</p>
+                        <p class="diet-num">16,500<small>円～</small></p>
+                    </div>
+                    <p class="diet-price__small">※増量後は用量に応じて料金が変わります。</p>
+                </div>
+                <div class="diet-price__card">
+                    <h3>経口GLP-1作動薬（1日1回の内服薬）</h3>
+                    <p class="diet-price__sub">30日分</p>
+                    <div class="diet-price__doses">
+                        <div><p>3mg</p><p class="diet-num">8,800<small>円</small></p></div>
+                        <div><p>7mg</p><p class="diet-num">18,700<small>円</small></p></div>
+                        <div><p>14mg</p><p class="diet-num">27,500<small>円</small></p></div>
+                    </div>
+                </div>
+            </div>
+            <p class="diet-price__note">初診料・再診料・検査費用などは別途必要となります。</p>
+        </div>
+    </section>
+
+    {{-- 処方の方針・受けられない方 --}}
+    <section class="diet-section">
+        <div class="diet-inner">
+            <p class="diet-policy">当院では、医師がBMIや健康状態、既往歴、血液検査結果、これまでの食事・運動療法などを確認し、治療が適切と判断した方に処方いたします。</p>
+            <div class="diet-policy__def">
+                <p><strong>■肥満症とは</strong></p>
+                <p>ただし、高血圧、脂質異常症又は耐糖能障害（2型糖尿病、耐糖能異常等）のいずれかを有し、食事療法・運動療法を行っても十分な効果が得られず、以下に該当する場合に限る。</p>
+                <ul>
+                    <li>BMIが27kg/m2以上であり、2つ以上の肥満に関連する健康障害を有する</li>
+                    <li>BMIが35kg/m2以上</li>
+                </ul>
+            </div>
+
+            <div class="diet-ng">
+                <h2>治療を受けられない方</h2>
+                <ul>
+                    <li>18歳未満の方</li>
+                    <li>妊娠中・授乳中、または妊娠を希望している方</li>
+                    <li>1型糖尿病の方、薬の成分でアレルギーを起こしたことがある方</li>
+                    <li>膵炎や胆のうの病気にかかったことがある方</li>
+                    <li>重い胃腸の病気がある方</li>
+                    <li>糖尿病の薬を使っている方</li>
+                    <li>摂食障害の治療歴がある方</li>
+                    <li>甲状腺髄様癌または多発性内分泌腫瘍症候群2型にかかったことがある方、またはご家族にかかった方がいる方</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    {{-- よくある質問 --}}
+    <section class="diet-section">
+        <div class="diet-inner">
+            <div class="diet-head">
+                <span class="diet-eyebrow">FAQ</span>
+                <h2>よくある質問</h2>
+            </div>
+            <div class="diet-faq">
+                @foreach ([
+                    ['注射は痛いですか？', '細い針の使い切りペン型で、ボタンを押すだけで注射できます。初回に看護師が使い方を説明します。'],
+                    ['どんな副作用がありますか？', '吐き気、便秘、下痢、食欲低下が多く、開始時や増量時に出やすい傾向があります。強い腹痛や続く嘔吐があれば、すぐにご連絡ください。消化器の医師が診察し、必要に応じて院内のCTや腹部エコーで検査します。'],
+                    ['保険は使えますか？', '当院のメディカルダイエットはすべて自費診療です。公的保険を使った肥満症治療は行っていません。同じ日に保険診療と一緒に受けることはできません。'],
+                    ['治療期間はどのくらいですか？', '4週ごとに通院し、治療期間の目安は6か月〜です。体重や検査結果を見ながら、医師と相談して続けるかどうかを決めます。'],
+                    ['他院から切り替えられますか？', '使用中の用量がわかるお薬手帳などをお持ちください。'],
+                ] as [$q, $a])
+                    <div class="diet-faq__item">
+                        <p class="diet-faq__q"><span>Q.</span>{{ $q }}</p>
+                        <p class="diet-faq__a">{{ $a }}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- 法定記載事項 --}}
+    <section class="diet-section diet-legal">
+        <div class="diet-inner">
+            <h2>自由診療に関する記載事項</h2>
+            <div class="diet-legal__body">
+                <p><strong>承認状況</strong>：持続性GIP/GLP-1受容体作動薬（週1回注射）は、国内で肥満症の治療薬として承認されています。承認された効能・効果（肥満症）の要件を満たさない方への使用は適応外使用となります。経口セマグルチド錠は国内では2型糖尿病の治療薬として承認されており、体重減少を目的とした使用は適応外使用です。なお、同じ成分の注射薬は、国内で肥満症の治療薬として承認されています。</p>
+                <p><strong>入手経路</strong>：国内の正規医薬品卸業者を通じて納入しています。</p>
+                <p><strong>主な副作用</strong>：吐き気、嘔吐、便秘、下痢、食欲低下、胃部不快感、倦怠感、低血糖など。まれに急性膵炎、胆のう障害、脱水が起こることがあります。</p>
+                <p><strong>救済制度</strong>：適応外使用により健康被害が生じた場合、医薬品副作用被害救済制度の対象外となることがあります。</p>
+                <p><strong>費用</strong>：保険適用外の自費診療です。標準的な費用は上記料金表のとおりです。</p>
+                <p><strong>治療期間・回数</strong>：4週ごとの通院、治療期間の目安は6か月〜です。</p>
+            </div>
+        </div>
+    </section>
+
+    {{-- 予約 --}}
+    <section class="diet-section">
+        <div class="diet-inner">
+            <div class="diet-cta">
+                <h2>ご予約・ご相談はお電話で</h2>
+                <p>メディカルダイエットをご希望の方は、事前にお電話にてお知らせください。</p>
+                <a href="tel:0471501441" class="diet-cta__tel">TEL 04-7150-1441</a>
+                <p>藤澤内科クリニック　〒270-0176 千葉県流山市加4-18-2<br>診療日：月・火・水・金（終日）、土（午前）</p>
+            </div>
+        </div>
+    </section>
+
+</div>
 @endsection

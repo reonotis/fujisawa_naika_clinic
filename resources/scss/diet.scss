@@ -1,0 +1,495 @@
+/* ===========================
+   メディカルダイエット（自費診療）
+   既存の配色（--main-color / --sub-color）に合わせる
+=========================== */
+@mixin diet-card-shadow {
+    box-shadow: 0 2px 6px rgba(30, 58, 95, .05), 0 10px 30px rgba(30, 58, 95, .07);
+}
+
+.diet {
+    --diet-navy: #1e3a5f;
+    --diet-muted: #4a5568;
+
+    font-size: 1rem;
+    line-height: 1.8;
+    padding-bottom: 2rem;
+
+    p { margin: 0; }
+
+    // グローバルの h2（英字の飾り・大きいサイズ）を打ち消す
+    h2 {
+        margin: 0;
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: .04em;
+        color: var(--diet-navy);
+
+        &::before { content: none; }
+    }
+
+    h3 { margin: 0; }
+
+    // ---------- 共通 ----------
+    .diet-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .diet-section {
+        padding: 2.5rem 0;
+    }
+
+    .diet-head {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 2.25rem;
+    }
+
+    .diet-eyebrow {
+        display: inline-block;
+        padding: .3rem 1rem;
+        margin-bottom: .8rem;
+        font-size: .8rem;
+        font-weight: 700;
+        letter-spacing: .18em;
+        color: var(--main-color);
+        background: var(--sub-color);
+        border-radius: 999px;
+    }
+
+    .diet-num {
+        font-weight: 700;
+        letter-spacing: .02em;
+
+        small { font-size: .45em; font-weight: 700; margin-left: .1em; }
+    }
+
+    // ---------- ヒーロー ----------
+    .diet-hero {
+        background: linear-gradient(135deg, var(--main-color) 0%, #6fa3dc 100%);
+        color: #fff;
+
+        .diet-inner {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        &__text {
+            flex: 1 1 440px;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        &__label {
+            align-self: flex-start;
+            padding: .35rem 1.1rem;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            background: rgba(255, 255, 255, .16);
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 999px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            font-weight: 700;
+            line-height: 1.45;
+            letter-spacing: .06em;
+
+            .diet-num { font-size: 1.5em; }
+        }
+
+        &__lead {
+            font-size: .95rem;
+            line-height: 1.9;
+            opacity: .95;
+        }
+
+        &__cards {
+            flex: 1 1 340px;
+            min-width: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: .8rem;
+        }
+
+        &__card {
+            background: #fff;
+            color: var(--diet-navy);
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: center;
+
+            p:first-child { font-size: .8rem; color: var(--diet-muted); }
+            p:last-child { font-weight: 700; font-size: 1.25rem; color: var(--main-color); }
+
+            &--price {
+                grid-column: span 2;
+                padding: 1.25rem;
+
+                p:last-child { font-size: 2.4rem; line-height: 1.2; color: var(--diet-navy); }
+            }
+        }
+    }
+
+    // ---------- はじめに ----------
+    .diet-intro {
+        padding-top: 4rem;
+
+        &__box {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 2.25rem 2.5rem;
+            background: var(--sub-color);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: .9rem;
+            line-height: 1.95;
+
+            strong { color: var(--main-color); }
+        }
+    }
+
+    // ---------- こんな方に ----------
+    .diet-checks {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+
+        li {
+            @include diet-card-shadow;
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.25rem;
+            font-weight: 700;
+            color: var(--diet-navy);
+            display: flex;
+            gap: .75rem;
+            align-items: flex-start;
+
+            &::before {
+                content: '✓';
+                flex: none;
+                width: 28px;
+                height: 28px;
+                margin-top: .1rem;
+                border-radius: 50%;
+                background: var(--main-color);
+                color: #fff;
+                font-size: .85rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    // ---------- 治療について ----------
+    .diet-band {
+        background: var(--sub-color);
+        margin-top: 2.5rem;
+
+        .diet-inner { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+
+        &__lead {
+            margin: 0 auto 2rem;
+            max-width: 760px;
+            text-align: center;
+        }
+    }
+
+    .diet-drugs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        gap: 1.25rem;
+    }
+
+    .diet-drug {
+        @include diet-card-shadow;
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.75rem;
+        border-top: 4px solid var(--main-color);
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+
+        &__tag {
+            align-self: flex-start;
+            padding: .2rem .8rem;
+            font-size: .8rem;
+            font-weight: 700;
+            color: var(--main-color);
+            background: var(--sub-color);
+            border-radius: 999px;
+        }
+
+        h3 { font-size: 1.2rem; color: var(--diet-navy); }
+        p:last-child { font-size: .95rem; color: var(--diet-muted); }
+    }
+
+    // ---------- 特徴 ----------
+    .diet-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+        gap: 1.25rem;
+    }
+
+    .diet-feature {
+        @include diet-card-shadow;
+        display: flex;
+        gap: 1.1rem;
+        align-items: flex-start;
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.5rem;
+
+        &__num {
+            flex: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--sub-color);
+            color: var(--main-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 { margin-bottom: .3rem; font-size: 1.05rem; color: var(--diet-navy); }
+        p { font-size: .92rem; color: var(--diet-muted); }
+    }
+
+    // ---------- 流れ ----------
+    .diet-steps {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+
+        li {
+            @include diet-card-shadow;
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.4rem 1rem;
+            text-align: center;
+        }
+
+        &__no {
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            color: var(--main-color);
+
+            span { display: block; font-size: 1.8rem; line-height: 1.2; letter-spacing: 0; }
+        }
+
+        &__title { margin: .4rem 0 .3rem !important; font-weight: 700; color: var(--diet-navy); }
+        &__text { font-size: .85rem; color: var(--diet-muted); }
+    }
+
+    // ---------- 料金 ----------
+    .diet-price {
+        background: var(--sub-color);
+        margin: 2.5rem 0;
+
+        .diet-inner { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+
+        &__note {
+            text-align: center;
+            font-size: .85rem;
+            color: var(--diet-muted);
+        }
+
+        &__grid {
+            margin: 0 0 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+            gap: 1.25rem;
+        }
+
+        &__card {
+            @include diet-card-shadow;
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.75rem;
+
+            h3 { margin-bottom: .2rem; font-size: 1.1rem; color: var(--diet-navy); }
+        }
+
+        &__sub { margin-bottom: 1.1rem !important; font-size: .85rem; color: var(--diet-muted); }
+
+        &__main {
+            background: var(--sub-color);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+
+            p:first-child { font-weight: 700; font-size: .95rem; }
+            .diet-num { font-size: 2.4rem; line-height: 1.2; color: var(--main-color); }
+        }
+
+        &__small { margin-top: .6rem !important; font-size: .8rem; color: var(--diet-muted); }
+
+        &__doses {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: .6rem;
+
+            div {
+                background: var(--sub-color);
+                border-radius: 12px;
+                padding: .9rem .4rem;
+                text-align: center;
+            }
+
+            p:first-child { font-weight: 700; font-size: .95rem; }
+            .diet-num { font-size: 1.35rem; color: var(--main-color); }
+        }
+    }
+
+    // ---------- 処方方針・受けられない方 ----------
+    .diet-policy {
+        padding: 1rem 1.25rem;
+        background: #fff8e1;
+        border-left: 4px solid #f5a623;
+        border-radius: 0 12px 12px 0;
+        font-weight: 700;
+
+        &__def {
+            margin-top: .8rem;
+            font-size: .8rem;
+            color: var(--diet-muted);
+            line-height: 1.7;
+
+            ul { margin: 0; padding-left: 1.2rem; }
+        }
+    }
+
+    .diet-ng {
+        margin-top: 2.5rem;
+        background: #fff;
+        border: 1px solid #e3e8ef;
+        border-radius: 16px;
+        padding: 1.75rem;
+
+        h2 { margin-bottom: .8rem; font-size: 1.2rem; }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: .92rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+            column-gap: 2.5rem;
+        }
+    }
+
+    // ---------- FAQ ----------
+    .diet-faq {
+        max-width: 880px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+
+        &__item {
+            @include diet-card-shadow;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        &__q {
+            padding: .9rem 1.4rem;
+            font-weight: 700;
+            color: var(--diet-navy);
+            border-bottom: 1px solid #edf2f7;
+
+            span { color: var(--main-color); margin-right: .4rem; }
+        }
+
+        &__a {
+            padding: .9rem 1.4rem;
+            font-size: .92rem;
+            color: var(--diet-muted);
+        }
+    }
+
+    // ---------- 法定記載事項 ----------
+    .diet-legal {
+        h2 { margin-bottom: .6rem; font-size: 1.05rem; }
+
+        &__body {
+            font-size: .8rem;
+            color: var(--diet-muted);
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            line-height: 1.8;
+        }
+    }
+
+    // ---------- 予約（既存の self-pay-cta と同じトーン） ----------
+    .diet-cta {
+        margin-top: 1rem;
+        text-align: center;
+        padding: 2.5rem 1rem;
+        background: var(--sub-color);
+        border-radius: 1rem;
+
+        h2 { margin-bottom: .5rem; font-size: 1.3rem; }
+
+        p {
+            color: #444;
+            font-size: .9rem;
+        }
+
+        &__tel {
+            display: inline-block;
+            margin: .75rem 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--main-color);
+            letter-spacing: .05em;
+        }
+    }
+
+    // ---------- スマホ ----------
+    @media (max-width: 768px) {
+        h2 { font-size: 1.35rem; }
+
+        .diet-hero {
+            .diet-inner { padding-top: 2.5rem; padding-bottom: 2.5rem; gap: 1.75rem; }
+            h1 { font-size: 1.6rem; }
+            &__card--price p:last-child { font-size: 2rem; }
+            &__card p:last-child { font-size: 1.1rem; }
+        }
+
+        .diet-intro { padding-top: 3rem; &__box { padding: 1.5rem 1.25rem; } }
+        .diet-band .diet-inner, .diet-price .diet-inner { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        .diet-drug, .diet-price__card, .diet-ng { padding: 1.25rem; }
+        .diet-feature { padding: 1.25rem; gap: .9rem; &__num { width: 44px; height: 44px; font-size: 1rem; } }
+        .diet-price__main .diet-num { font-size: 2rem; }
+        .diet-price__doses .diet-num { font-size: 1.1rem; }
+        .diet-cta__tel { font-size: 1.35rem; }
+    }
+}

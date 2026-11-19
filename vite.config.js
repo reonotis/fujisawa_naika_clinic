@@ -28,6 +28,7 @@ export default defineConfig({
                 'resources/scss/endoscopy.scss',
                 'resources/scss/self-pay.scss',
                 'resources/scss/ct.scss',
+                'resources/scss/diet.scss',
             ],
             refresh: true,
         }),
